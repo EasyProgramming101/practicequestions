@@ -4,88 +4,807 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science Quiz</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --gray-light: #f3f4f6;
+            --gray: #9ca3af;
+            --gray-dark: #4b5563;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --red: #ef4444;
+            --green: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--gray-light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .topic-selector {
+            margin-bottom: 2rem;
+        }
+        
+        .select-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray);
+            border-radius: 6px;
+            background-color: var(--white);
+            color: var(--text);
+            font-size: 1rem;
+            cursor: pointer;
+            appearance: none;
+        }
+        
+        .select-wrapper::after {
+            content: "▼";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-dark);
+            pointer-events: none;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+        
+        button {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        button:disabled {
+            background-color: var(--gray);
+            cursor: not-allowed;
+        }
+        
+        .pro-badge {
+            background-color: var(--red);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        
+        .quiz-container {
+            display: none;
+        }
+        
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .quiz-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .quiz-progress {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+        
+        .question-container {
+            margin-bottom: 2rem;
+        }
+        
+        .question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .options {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid var(--gray);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .option:hover {
+            background-color: var(--gray-light);
+        }
+        
+        .option.selected {
+            border-color: var(--primary);
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+        
+        .option-prefix {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--gray-light);
+            border-radius: 50%;
+            margin-right: 1rem;
+            font-weight: 600;
+        }
+        
+        .selected .option-prefix {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .option-text {
+            flex: 1;
+        }
+        
+        .quiz-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+        
+        .back-btn {
+            background-color: var(--gray-light);
+            color: var(--text);
+        }
+        
+        .back-btn:hover {
+            background-color: var(--gray);
+        }
+        
+        .results-container {
+            display: none;
+            text-align: center;
+        }
+        
+        .results-header {
+            margin-bottom: 2rem;
+        }
+        
+        .results-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .results-subtitle {
+            color: var(--text-light);
+        }
+        
+        .score {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 1.5rem 0;
+        }
+        
+        .score-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .restart-btn {
+            background-color: var(--gray-light);
+            color: var(--text);
+        }
+        
+        .pro-tooltip {
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Blurred pro options */
+        .pro-option {
+            filter: blur(1px);
+            opacity: 0.7;
+            position: relative;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="https://computersciencequiz.github.io/homepage/" class="return-home-btn">Return to Homepage</a>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="container">
-        <h1>Computer Science Quiz</h1>
+    <div class="container">
+        <header>
+            <h1>Computer Science Quiz Challenge</h1>
+            <p class="description">Test your knowledge with our practice questions</p>
+        </header>
         
-        <!-- Quiz Controls -->
-        <section class="quiz-controls">
-            <select class="topic-select" id="topicSelect">
-                <option value="">Select a Topic</option>
-                <option value="Data Structures">Data Structures</option>
-                <option value="Algorithms">Algorithms</option>
-                <option value="Operating Systems">Operating Systems</option>
-            </select>
-
-            <div class="progress-container" id="progressContainer" style="display: none;">
-                <div class="progress-text" id="progressText">Questions Answered: 0/5</div>
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-        </section>
-
-        <!-- Quiz Content -->
-        <section id="quizContainer" class="quiz-container" style="display: none;"></section>
-
-        <!-- Donation Section -->
-        <section id="donate" class="donate-section">
-            <h2 class="donation-title">Support computer science education for aspiring professionals worldwide!</h2>
+        <div id="topic-selector" class="topic-selector">
+            <h2>Select a Computer Science Topic</h2>
+            <p class="description">Choose a topic to start your 10-question quiz session</p>
             
-            <div class="donation-image-container">
-                <img src="https://example.com/cs-image.jpg"
-                     alt="Computer Science education"
-                     class="donation-image"
-                     loading="lazy">
+            <div class="select-wrapper">
+                <select id="topic-dropdown">
+                    <option value="" disabled selected>Select a topic...</option>
+                    <option value="datastructures">Data Structures</option>
+                    <option value="algorithms">Algorithms</option>
+                    <option value="operatingsystems">Operating Systems</option>
+                    <option value="database" class="pro-option">Database Systems</option>
+                    <option value="networking" class="pro-option">Computer Networking</option>
+                    <option value="softwareeng" class="pro-option">Software Engineering</option>
+                    <option value="webdev" class="pro-option">Web Development</option>
+                    <option value="security" class="pro-option">Cybersecurity</option>
+                </select>
             </div>
             
-            <p class="donation-description">
-                Many aspiring computer scientists lack access to quality resources. Help us provide free tools and education to empower their success.
-            </p>
-        </section>
-    </main>
-
-    <!-- Fixed Elements -->
-    <div class="donate-banner">
-        <a href="https://csdonations.github.io/donate/" target="_blank" rel="noopener noreferrer">
-            PLEASE CLICK HERE TO DONATE
-        </a>
-    </div>
-
-    <!-- Telegram Popup -->
-    <div class="telegram-popup" id="telegramPopup" style="display: none;">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            
-            <div class="popup-header">
-                <img src="https://logos-world.net/wp-content/uploads/2021/03/Telegram-Symbol.png" 
-                     alt="Telegram Logo" 
-                     class="telegram-logo">
-                <h2>🚨 Limited Time Access! 🚨</h2>
+            <button id="start-quiz" disabled>Start Quiz</button>
+        </div>
+        
+        <div id="quiz-container" class="quiz-container">
+            <div class="quiz-header">
+                <div class="quiz-title" id="quiz-title">Data Structures Quiz</div>
+                <div class="quiz-progress">Question <span id="current-question">1</span> of <span id="total-questions">10</span></div>
             </div>
-
-            <div class="popup-body">
-                <p class="urgent-msg">⚠️ Our Telegram group is closing in less than 24 hours!</p>
-                <p>Join our exclusive Telegram channel to access:</p>
-                <ul>
-                    <li>📚 Free Video Lectures</li>
-                    <li>📝 Study Materials</li>
-                    <li>👥 Community Support</li>
-                    <li>🎯 Practice Problems</li>
-                </ul>
-                <a href="https://t.me/cs101" class="join-btn" target="_blank">
-                    Join Now Before It's Too Late!
-                </a>
+            
+            <div class="question-container">
+                <div id="question" class="question">Loading question...</div>
+                <div id="options" class="options">
+                    <!-- Options will be inserted here by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="quiz-navigation">
+                <button id="back-btn" class="back-btn">Back to Topics</button>
+                <button id="next-btn">Next Question</button>
+            </div>
+        </div>
+        
+        <div id="results-container" class="results-container">
+            <div class="results-header">
+                <div class="results-title">Quiz Complete!</div>
+                <div class="results-subtitle" id="results-topic">Data Structures Quiz</div>
+            </div>
+            
+            <div class="score" id="score">7/10</div>
+            <div class="score-text" id="score-text">Great job! You scored 70%</div>
+            
+            <div class="actions">
+                <button id="restart-btn" class="restart-btn">Try Another Topic</button>
+                <button id="retry-btn">Retry This Topic</button>
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    
+    <div id="pro-tooltip" class="pro-tooltip">UPGRADE TO PRO</div>
+    
+    <script>
+        // DOM Elements
+        const topicSelector = document.getElementById('topic-selector');
+        const quizContainer = document.getElementById('quiz-container');
+        const resultsContainer = document.getElementById('results-container');
+        const topicDropdown = document.getElementById('topic-dropdown');
+        const startQuizBtn = document.getElementById('start-quiz');
+        const backBtn = document.getElementById('back-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const restartBtn = document.getElementById('restart-btn');
+        const retryBtn = document.getElementById('retry-btn');
+        const quizTitle = document.getElementById('quiz-title');
+        const currentQuestionSpan = document.getElementById('current-question');
+        const totalQuestionsSpan = document.getElementById('total-questions');
+        const questionElement = document.getElementById('question');
+        const optionsElement = document.getElementById('options');
+        const resultsTopic = document.getElementById('results-topic');
+        const scoreElement = document.getElementById('score');
+        const scoreTextElement = document.getElementById('score-text');
+        const proTooltip = document.getElementById('pro-tooltip');
+        
+        // Quiz state
+        let currentTopic = '';
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let selectedAnswers = [];
+        
+        // Question banks for each topic
+        const questionBanks = {
+            datastructures: [
+                {
+                    question: "Which data structure follows the Last-In-First-Out (LIFO) principle?",
+                    options: ["Queue", "Stack", "Linked List", "Binary Tree"],
+                    answer: 1
+                },
+                {
+                    question: "Which of the following is NOT a linear data structure?",
+                    options: ["Array", "Linked List", "Queue", "Tree"],
+                    answer: 3
+                },
+                {
+                    question: "What is the time complexity of searching an element in a hash table in the average case?",
+                    options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+                    answer: 0
+                },
+                {
+                    question: "What data structure would you use to check if a syntax has balanced parentheses?",
+                    options: ["Queue", "Stack", "Heap", "Linked List"],
+                    answer: 1
+                },
+                {
+                    question: "Which of these data structures allows for O(1) insertion and deletion at both ends?",
+                    options: ["Array", "Singly Linked List", "Doubly Linked List", "Stack"],
+                    answer: 2
+                },
+                {
+                    question: "What is the best case time complexity for searching in a binary search tree?",
+                    options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+                    answer: 0
+                },
+                {
+                    question: "Which data structure is most suitable for implementing a priority queue?",
+                    options: ["Stack", "Linked List", "Heap", "Hash Table"],
+                    answer: 2
+                },
+                {
+                    question: "In a min-heap, the parent node is always _____ than its children.",
+                    options: ["Greater", "Equal", "Lesser", "No relation"],
+                    answer: 2
+                },
+                {
+                    question: "What is the space complexity of an adjacency matrix representation of a graph with n vertices?",
+                    options: ["O(1)", "O(n)", "O(n²)", "O(n + e) where e is the number of edges"],
+                    answer: 2
+                },
+                {
+                    question: "Which data structure is used to implement recursion?",
+                    options: ["Queue", "Stack", "Array", "Linked List"],
+                    answer: 1
+                },
+                {
+                    question: "Which of the following is NOT a self-balancing binary search tree?",
+                    options: ["AVL Tree", "Red-Black Tree", "B-Tree", "Binary Heap"],
+                    answer: 3
+                },
+                {
+                    question: "What is the worst-case time complexity for inserting a node into a balanced binary search tree?",
+                    options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+                    answer: 1
+                },
+                {
+                    question: "Which of the following data structures can be used to implement a dictionary?",
+                    options: ["Stack", "Queue", "Linked List", "Hash Table"],
+                    answer: 3
+                },
+                {
+                    question: "What operation would you use to add an element to a stack?",
+                    options: ["Insert", "Push", "Enqueue", "Add"],
+                    answer: 1
+                },
+                {
+                    question: "In a trie data structure, each node typically represents what?",
+                    options: ["A complete word", "A character", "A number", "A pointer"],
+                    answer: 1
+                }
+            ],
+            algorithms: [
+                {
+                    question: "What is the worst-case time complexity of the QuickSort algorithm?",
+                    options: ["O(n)", "O(n log n)", "O(n²)", "O(2ⁿ)"],
+                    answer: 2
+                },
+                {
+                    question: "Which sorting algorithm has the best average-case time complexity?",
+                    options: ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+                    answer: 2
+                },
+                {
+                    question: "Which algorithm is used to find the shortest path in a weighted graph?",
+                    options: ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "Binary Search"],
+                    answer: 2
+                },
+                {
+                    question: "Which of the following is an example of a greedy algorithm?",
+                    options: ["Dynamic Programming", "Quicksort", "Merge Sort", "Kruskal's Algorithm"],
+                    answer: 3
+                },
+                {
+                    question: "What type of algorithm is the binary search?",
+                    options: ["Brute Force", "Divide and Conquer", "Greedy", "Dynamic Programming"],
+                    answer: 1
+                },
+                {
+                    question: "Which algorithm is used to find the minimum spanning tree of a graph?",
+                    options: ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "Prim's Algorithm"],
+                    answer: 3
+                },
+                {
+                    question: "Which algorithm would you use to find all connected components in an undirected graph?",
+                    options: ["Binary Search", "Breadth-First Search", "Dijkstra's Algorithm", "Dynamic Programming"],
+                    answer: 1
+                },
+                {
+                    question: "What is the time complexity of the Floyd-Warshall algorithm for finding shortest paths in a graph?",
+                    options: ["O(n)", "O(n log n)", "O(n²)", "O(n³)"],
+                    answer: 3
+                },
+                {
+                    question: "Which search algorithm requires the graph to be unweighted to find the shortest path?",
+                    options: ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "A* Search"],
+                    answer: 1
+                },
+                {
+                    question: "What is a heuristic in the context of algorithms?",
+                    options: ["A technique that guarantees the optimal solution", "A function that perfectly estimates the cost to reach the goal", "A rule of thumb that helps find a solution more quickly", "An algorithm that only works on sorted data"],
+                    answer: 2
+                },
+                {
+                    question: "Which algorithm paradigm breaks a problem into subproblems and combines their solutions?",
+                    options: ["Greedy", "Divide and Conquer", "Dynamic Programming", "Backtracking"],
+                    answer: 1
+                },
+                {
+                    question: "What is the difference between a deterministic and a non-deterministic algorithm?",
+                    options: ["Speed", "Predictable output for the same input", "Memory usage", "Programming language"],
+                    answer: 1
+                },
+                {
+                    question: "Which algorithm would be most efficient for searching in a sorted array?",
+                    options: ["Linear Search", "Binary Search", "Depth-First Search", "Breadth-First Search"],
+                    answer: 1
+                },
+                {
+                    question: "What does the 'Big O' notation represent in algorithm analysis?",
+                    options: ["Best case complexity", "Average case complexity", "Worst case complexity", "Space complexity only"],
+                    answer: 2
+                },
+                {
+                    question: "Which technique involves solving a problem by trying different possibilities one by one?",
+                    options: ["Greedy Algorithms", "Dynamic Programming", "Backtracking", "Divide and Conquer"],
+                    answer: 2
+                }
+            ],
+            operatingsystems: [
+                {
+                    question: "What is a deadlock in an operating system?",
+                    options: ["A program that has terminated abnormally", "A process waiting for CPU", "A situation where two or more processes are unable to proceed", "A security breach"],
+                    answer: 2
+                },
+                {
+                    question: "Which scheduling algorithm might lead to starvation?",
+                    options: ["Round Robin", "First-Come-First-Served", "Shortest Job First", "Priority Scheduling"],
+                    answer: 3
+                },
+                {
+                    question: "What is virtual memory in an operating system?",
+                    options: ["RAM that is virtually added to the system", "A technique that gives the illusion of more memory than physically available", "Memory allocated to virtual machines", "Temporary memory used during boot process"],
+                    answer: 1
+                },
+                {
+                    question: "Which of the following is NOT a function of an operating system?",
+                    options: ["Memory management", "Process scheduling", "Web browsing", "File management"],
+                    answer: 2
+                },
+                {
+                    question: "What is a page fault?",
+                    options: ["An error in a program", "When the CPU attempts to access a page not in physical memory", "When a page in memory is corrupted", "When too many pages are allocated"],
+                    answer: 1
+                },
+                {
+                    question: "What is the purpose of a semaphore in operating systems?",
+                    options: ["To protect against malware", "To synchronize access to shared resources", "To schedule processes", "To allocate memory"],
+                    answer: 1
+                },
+                {
+                    question: "Which algorithm is commonly used for disk scheduling?",
+                    options: ["Round Robin", "FIFO", "SCAN (Elevator)", "Priority Scheduling"],
+                    answer: 2
+                },
+                {
+                    question: "What is thrashing in an operating system?",
+                    options: ["Deleting unused files", "Excessive paging activity", "CPU overheating", "Network congestion"],
+                    answer: 1
+                },
+                {
+                    question: "What is a race condition?",
+                    options: ["A situation where processes race for CPU time", "A situation where output depends on the sequence of execution", "A condition for starting a process", "A method for process scheduling"],
+                    answer: 1
+                },
+                {
+                    question: "Which of the following is a type of inter-process communication?",
+                    options: ["Virtual memory", "Paging", "Pipes", "Thrashing"],
+                    answer: 2
+                },
+                {
+                    question: "What is the primary difference between a process and a thread?",
+                    options: ["Processes run programs while threads run tasks", "Processes share memory while threads don't", "Threads have their own memory space while processes share memory", "Processes share memory while threads have their own memory space"],
+                    answer: 3
+                },
+                {
+                    question: "Which of the following is a valid state for a process?",
+                    options: ["Executing", "Running", "Ready", "All of the above"],
+                    answer: 3
+                },
+                {
+                    question: "What is context switching in operating systems?",
+                    options: ["Changing user accounts", "Switching between different applications", "Saving the state of a process and loading another", "Changing system settings"],
+                    answer: 2
+                },
+                {
+                    question: "Which scheduling algorithm has the shortest average waiting time?",
+                    options: ["First-Come-First-Served", "Round Robin", "Shortest Job First", "Priority Scheduling"],
+                    answer: 2
+                },
+                {
+                    question: "What is the purpose of a device driver?",
+                    options: ["To drive the CPU speed", "To act as an interface between hardware and OS", "To manage the power supply", "To control user interfaces"],
+                    answer: 1
+                }
+            ]
+        };
+        
+        // Initialize the quiz
+        function init() {
+            // Enable/disable start button based on topic selection
+            topicDropdown.addEventListener('change', function() {
+                const selectedOption = this.options[this.selectedIndex];
+                currentTopic = this.value;
+                
+                if (currentTopic && !selectedOption.classList.contains('pro-option')) {
+                    startQuizBtn.disabled = false;
+                } else {
+                    startQuizBtn.disabled = true;
+                }
+            });
+            
+            // Handle PRO option selection
+            topicDropdown.addEventListener('mousedown', function(event) {
+                const select = this;
+                setTimeout(function() {
+                    const selectedOption = select.options[select.selectedIndex];
+                    if (selectedOption && selectedOption.classList.contains('pro-option')) {
+                        showProTooltip(event);
+                        // Reset selection to previous or empty
+                        select.value = currentTopic || "";
+                    }
+                }, 100);
+            });
+            
+            // Start quiz button click handler
+            startQuizBtn.addEventListener('click', startQuiz);
+            
+            // Back button click handler
+            backBtn.addEventListener('click', function() {
+                showTopicSelector();
+            });
+            
+            // Next button click handler
+            nextBtn.addEventListener('click', goToNextQuestion);
+            
+            // Restart button click handler
+            restartBtn.addEventListener('click', function() {
+                showTopicSelector();
+            });
+            
+            // Retry button click handler
+            retryBtn.addEventListener('click', function() {
+                startQuiz();
+            });
+        }
+        
+        // Start the quiz with the selected topic
+        function startQuiz() {
+            // Reset quiz state
+            currentQuestionIndex = 0;
+            score = 0;
+            selectedAnswers = Array(10).fill(null);
+            
+            // Get 10 random questions for the selected topic
+            questions = getRandomQuestions(questionBanks[currentTopic], 10);
+            
+            // Update UI
+            quizTitle.textContent = getTopicName(currentTopic) + " Quiz";
+            totalQuestionsSpan.textContent = questions.length;
+            
+            // Show the quiz container
+            topicSelector.style.display = 'none';
+            quizContainer.style.display = 'block';
+            resultsContainer.style.display = 'none';
+            
+            // Load the first question
+            loadQuestion();
+        }
+        
+        // Load the current question
+        function loadQuestion() {
+            const question = questions[currentQuestionIndex];
+            currentQuestionSpan.textContent = currentQuestionIndex + 1;
+            
+            // Update question text
+            questionElement.textContent = question.question;
+            
+            // Clear previous options
+            optionsElement.innerHTML = '';
+            
+            // Add new options
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                if (selectedAnswers[currentQuestionIndex] === index) {
+                    optionElement.classList.add('selected');
+                }
+                
+                optionElement.innerHTML = `
+                    <div class="option-prefix">${String.fromCharCode(65 + index)}</div>
+                    <div class="option-text">${option}</div>
+                `;
+                
+                optionElement.addEventListener('click', () => selectOption(index));
+                optionsElement.appendChild(optionElement);
+            });
+            
+            // Update button text based on question
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.textContent = 'Finish Quiz';
+            } else {
+                nextBtn.textContent = 'Next Question';
+            }
+        }
+        
+        // Select an option
+        function selectOption(optionIndex) {
+            selectedAnswers[currentQuestionIndex] = optionIndex;
+            
+            // Update UI to show selected option
+            const options = optionsElement.querySelectorAll('.option');
+            options.forEach((option, index) => {
+                if (index === optionIndex) {
+                    option.classList.add('selected');
+                } else {
+                    option.classList.remove('selected');
+                }
+            });
+        }
+        
+        // Go to next question or finish quiz
+        function goToNextQuestion() {
+            // Check if an option is selected
+            if (selectedAnswers[currentQuestionIndex] === null) {
+                alert('Please select an answer before proceeding.');
+                return;
+            }
+            
+            // Check if current answer is correct
+            if (selectedAnswers[currentQuestionIndex] === questions[currentQuestionIndex].answer) {
+                score++;
+            }
+            
+            // Go to next question or finish
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            } else {
+                finishQuiz();
+            }
+        }
+        
+        // Finish quiz and show results
+        function finishQuiz() {
+            // Calculate score
+            const percentage = (score / questions.length) * 100;
+            
+            // Update results UI
+            resultsTopic.textContent = getTopicName(currentTopic) + " Quiz";
+            scoreElement.textContent = `${score}/${questions.length}`;
+            scoreTextElement.textContent = `You scored ${percentage}%`;
+            
+            // Show results
+            quizContainer.style.display = 'none';
+            resultsContainer.style.display = 'block';
+        }
+        
+        // Show topic selector
+        function showTopicSelector() {
+            topicSelector.style.display = 'block';
+            quizContainer.style.display = 'none';
+            resultsContainer.style.display = 'none';
+        }
+        
+        // Get random questions from a question bank
+        function getRandomQuestions(bank, count) {
+            const shuffled = [...bank].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+        
+        // Get topic name from topic code
+        function getTopicName(topic) {
+            switch(topic) {
+                case 'datastructures': return 'Data Structures';
+                case 'algorithms': return 'Algorithms';
+                case 'operatingsystems': return 'Operating Systems';
+                default: return '';
+            }
+        }
+        
+        // Show PRO tooltip
+        function showProTooltip(event) {
+            proTooltip.style.left = `${event.pageX}px`;
+            proTooltip.style.top = `${event.pageY - 40}px`;
+            proTooltip.style.opacity = '1';
+            
+            setTimeout(() => {
+                proTooltip.style.opacity = '0';
+            }, 2000);
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', init);
+    </script>
 </body>
 </html>
