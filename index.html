@@ -376,237 +376,3072 @@
         
         // Question banks for each topic
         const questionBanks = {
-            datastructures: [
+           "data-structures": [
+        {
+            "question": "Which data structure follows the LIFO (Last In First Out) principle?",
+            "options": ["Queue", "Stack", "Linked List", "Array"],
+            "answer": 1
+        },
+        {
+            "question": "What is the time complexity of searching an element in a balanced binary search tree?",
+            "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+            "answer": 2
+        },
+        {
+            "question": "Which of the following is not a linear data structure?",
+            "options": ["Array", "Queue", "Stack", "Tree"],
+            "answer": 3
+        },
+        {
+            "question": "In a Min-Heap, which element is always at the root?",
+            "options": ["Largest element", "Smallest element", "Middle element", "Random element"],
+            "answer": 1
+        },
+        {
+            "question": "What is the worst-case time complexity of inserting an element into a hash table?",
+            "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+            "answer": 1
+        },
+        {
+            "question": "Which data structure is best suited for implementing a priority queue?",
+            "options": ["Array", "Linked List", "Heap", "Stack"],
+            "answer": 2
+        },
+        {
+            "question": "What is the maximum number of nodes in a binary tree of height h?",
+            "options": ["2^h - 1", "2^h", "2^(h+1) - 1", "h^2"],
+            "answer": 2
+        },
+        {
+            "question": "Which of the following is not a characteristic of a B-Tree?",
+            "options": ["Self-balancing", "Sorted keys", "Variable number of children", "Can only be used for disk storage"],
+            "answer": 3
+        },
+        {
+            "question": "What is the time complexity of the best sorting algorithm for sorting a linked list?",
+            "options": ["O(n)", "O(n log n)", "O(n²)", "O(1)"],
+            "answer": 1
+        },
+        {
+            "question": "What is the primary advantage of a doubly linked list over a singly linked list?",
+            "options": ["Uses less memory", "Faster insertion", "Can be traversed in both directions", "Better cache locality"],
+            "answer": 2
+        },
                 {
-                    question: "Which data structure follows the Last-In-First-Out (LIFO) principle?",
-                    options: ["Queue", "Stack", "Linked List", "Binary Tree"],
-                    answer: 1
-                },
-                {
-                    question: "Which of the following is NOT a linear data structure?",
-                    options: ["Array", "Linked List", "Queue", "Tree"],
-                    answer: 3
-                },
-                {
-                    question: "What is the time complexity of searching an element in a hash table in the average case?",
-                    options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
-                    answer: 0
-                },
-                {
-                    question: "What data structure would you use to check if a syntax has balanced parentheses?",
-                    options: ["Queue", "Stack", "Heap", "Linked List"],
-                    answer: 1
-                },
-                {
-                    question: "Which of these data structures allows for O(1) insertion and deletion at both ends?",
-                    options: ["Array", "Singly Linked List", "Doubly Linked List", "Stack"],
-                    answer: 2
-                },
-                {
-                    question: "What is the best case time complexity for searching in a binary search tree?",
-                    options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
-                    answer: 0
-                },
-                {
-                    question: "Which data structure is most suitable for implementing a priority queue?",
-                    options: ["Stack", "Linked List", "Heap", "Hash Table"],
-                    answer: 2
-                },
-                {
-                    question: "In a min-heap, the parent node is always _____ than its children.",
-                    options: ["Greater", "Equal", "Lesser", "No relation"],
-                    answer: 2
-                },
-                {
-                    question: "What is the space complexity of an adjacency matrix representation of a graph with n vertices?",
-                    options: ["O(1)", "O(n)", "O(n²)", "O(n + e) where e is the number of edges"],
-                    answer: 2
-                },
-                {
-                    question: "Which data structure is used to implement recursion?",
-                    options: ["Queue", "Stack", "Array", "Linked List"],
-                    answer: 1
-                },
-                {
-                    question: "Which of the following is NOT a self-balancing binary search tree?",
-                    options: ["AVL Tree", "Red-Black Tree", "B-Tree", "Binary Heap"],
-                    answer: 3
-                },
-                {
-                    question: "What is the worst-case time complexity for inserting a node into a balanced binary search tree?",
-                    options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
-                    answer: 1
-                },
-                {
-                    question: "Which of the following data structures can be used to implement a dictionary?",
-                    options: ["Stack", "Queue", "Linked List", "Hash Table"],
-                    answer: 3
-                },
-                {
-                    question: "What operation would you use to add an element to a stack?",
-                    options: ["Insert", "Push", "Enqueue", "Add"],
-                    answer: 1
-                },
-                {
-                    question: "In a trie data structure, each node typically represents what?",
-                    options: ["A complete word", "A character", "A number", "A pointer"],
-                    answer: 1
-                }
-            ],
-            algorithms: [
-                {
-                    question: "What is the worst-case time complexity of the QuickSort algorithm?",
-                    options: ["O(n)", "O(n log n)", "O(n²)", "O(2ⁿ)"],
-                    answer: 2
-                },
-                {
-                    question: "Which sorting algorithm has the best average-case time complexity?",
-                    options: ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
-                    answer: 2
-                },
-                {
-                    question: "Which algorithm is used to find the shortest path in a weighted graph?",
-                    options: ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "Binary Search"],
-                    answer: 2
-                },
-                {
-                    question: "Which of the following is an example of a greedy algorithm?",
-                    options: ["Dynamic Programming", "Quicksort", "Merge Sort", "Kruskal's Algorithm"],
-                    answer: 3
-                },
-                {
-                    question: "What type of algorithm is the binary search?",
-                    options: ["Brute Force", "Divide and Conquer", "Greedy", "Dynamic Programming"],
-                    answer: 1
-                },
-                {
-                    question: "Which algorithm is used to find the minimum spanning tree of a graph?",
-                    options: ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "Prim's Algorithm"],
-                    answer: 3
-                },
-                {
-                    question: "Which algorithm would you use to find all connected components in an undirected graph?",
-                    options: ["Binary Search", "Breadth-First Search", "Dijkstra's Algorithm", "Dynamic Programming"],
-                    answer: 1
-                },
-                {
-                    question: "What is the time complexity of the Floyd-Warshall algorithm for finding shortest paths in a graph?",
-                    options: ["O(n)", "O(n log n)", "O(n²)", "O(n³)"],
-                    answer: 3
-                },
-                {
-                    question: "Which search algorithm requires the graph to be unweighted to find the shortest path?",
-                    options: ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "A* Search"],
-                    answer: 1
-                },
-                {
-                    question: "What is a heuristic in the context of algorithms?",
-                    options: ["A technique that guarantees the optimal solution", "A function that perfectly estimates the cost to reach the goal", "A rule of thumb that helps find a solution more quickly", "An algorithm that only works on sorted data"],
-                    answer: 2
-                },
-                {
-                    question: "Which algorithm paradigm breaks a problem into subproblems and combines their solutions?",
-                    options: ["Greedy", "Divide and Conquer", "Dynamic Programming", "Backtracking"],
-                    answer: 1
-                },
-                {
-                    question: "What is the difference between a deterministic and a non-deterministic algorithm?",
-                    options: ["Speed", "Predictable output for the same input", "Memory usage", "Programming language"],
-                    answer: 1
-                },
-                {
-                    question: "Which algorithm would be most efficient for searching in a sorted array?",
-                    options: ["Linear Search", "Binary Search", "Depth-First Search", "Breadth-First Search"],
-                    answer: 1
-                },
-                {
-                    question: "What does the 'Big O' notation represent in algorithm analysis?",
-                    options: ["Best case complexity", "Average case complexity", "Worst case complexity", "Space complexity only"],
-                    answer: 2
-                },
-                {
-                    question: "Which technique involves solving a problem by trying different possibilities one by one?",
-                    options: ["Greedy Algorithms", "Dynamic Programming", "Backtracking", "Divide and Conquer"],
-                    answer: 2
-                }
-            ],
-            operatingsystems: [
-                {
-                    question: "What is a deadlock in an operating system?",
-                    options: ["A program that has terminated abnormally", "A process waiting for CPU", "A situation where two or more processes are unable to proceed", "A security breach"],
-                    answer: 2
-                },
-                {
-                    question: "Which scheduling algorithm might lead to starvation?",
-                    options: ["Round Robin", "First-Come-First-Served", "Shortest Job First", "Priority Scheduling"],
-                    answer: 3
-                },
-                {
-                    question: "What is virtual memory in an operating system?",
-                    options: ["RAM that is virtually added to the system", "A technique that gives the illusion of more memory than physically available", "Memory allocated to virtual machines", "Temporary memory used during boot process"],
-                    answer: 1
-                },
-                {
-                    question: "Which of the following is NOT a function of an operating system?",
-                    options: ["Memory management", "Process scheduling", "Web browsing", "File management"],
-                    answer: 2
-                },
-                {
-                    question: "What is a page fault?",
-                    options: ["An error in a program", "When the CPU attempts to access a page not in physical memory", "When a page in memory is corrupted", "When too many pages are allocated"],
-                    answer: 1
-                },
-                {
-                    question: "What is the purpose of a semaphore in operating systems?",
-                    options: ["To protect against malware", "To synchronize access to shared resources", "To schedule processes", "To allocate memory"],
-                    answer: 1
-                },
-                {
-                    question: "Which algorithm is commonly used for disk scheduling?",
-                    options: ["Round Robin", "FIFO", "SCAN (Elevator)", "Priority Scheduling"],
-                    answer: 2
-                },
-                {
-                    question: "What is thrashing in an operating system?",
-                    options: ["Deleting unused files", "Excessive paging activity", "CPU overheating", "Network congestion"],
-                    answer: 1
-                },
-                {
-                    question: "What is a race condition?",
-                    options: ["A situation where processes race for CPU time", "A situation where output depends on the sequence of execution", "A condition for starting a process", "A method for process scheduling"],
-                    answer: 1
-                },
-                {
-                    question: "Which of the following is a type of inter-process communication?",
-                    options: ["Virtual memory", "Paging", "Pipes", "Thrashing"],
-                    answer: 2
-                },
-                {
-                    question: "What is the primary difference between a process and a thread?",
-                    options: ["Processes run programs while threads run tasks", "Processes share memory while threads don't", "Threads have their own memory space while processes share memory", "Processes share memory while threads have their own memory space"],
-                    answer: 3
-                },
-                {
-                    question: "Which of the following is a valid state for a process?",
-                    options: ["Executing", "Running", "Ready", "All of the above"],
-                    answer: 3
-                },
-                {
-                    question: "What is context switching in operating systems?",
-                    options: ["Changing user accounts", "Switching between different applications", "Saving the state of a process and loading another", "Changing system settings"],
-                    answer: 2
-                },
-                {
-                    question: "Which scheduling algorithm has the shortest average waiting time?",
-                    options: ["First-Come-First-Served", "Round Robin", "Shortest Job First", "Priority Scheduling"],
-                    answer: 2
-                },
-                {
-                    question: "What is the purpose of a device driver?",
-                    options: ["To drive the CPU speed", "To act as an interface between hardware and OS", "To manage the power supply", "To control user interfaces"],
-                    answer: 1
-                }
-            ]
+      "question": "Which data structure operates on a Last-In-First-Out (LIFO) principle?",
+      "options": ["Queue", "Stack", "Linked List", "Tree"],
+      "answer": 1
+    },
+    {
+      "question": "What is the time complexity for accessing an element in an array by index?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+      "answer": 0
+    },
+    {
+      "question": "Which of these is NOT a linear data structure?",
+      "options": ["Array", "Linked List", "Stack", "Binary Tree"],
+      "answer": 3
+    },
+    {
+      "question": "In a min-heap, which element is at the root?",
+      "options": ["The largest element", "The smallest element", "The median element", "Any random element"],
+      "answer": 1
+    },
+    {
+      "question": "What is the average time complexity to search for an element in a hash table?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+      "answer": 0
+    },
+      {
+    "question": "Which data structure uses LIFO (Last In First Out) order?",
+    "options": ["Stack", "Queue", "Tree", "Graph"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used for breadth-first search (BFS) traversal?",
+    "options": ["Queue", "Stack", "Tree", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a linear data structure?",
+    "options": ["Array", "Graph", "Tree", "Hash Map"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of accessing an element in an array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is NOT a type of tree data structure?",
+    "options": ["Binary Tree", "AVL Tree", "Stack Tree", "B-tree"],
+    "answer": 2
+},
+{
+    "question": "What does the `push` operation do in a stack?",
+    "options": ["Adds an element to the top", "Removes the top element", "Peeks at the top element", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "In a doubly linked list, how many pointers are in each node?",
+    "options": ["Two", "One", "Three", "None"],
+    "answer": 0
+},
+{
+    "question": "Which of the following data structures is used for implementing a priority queue?",
+    "options": ["Heap", "Queue", "Linked List", "Array"],
+    "answer": 0
+},
+{
+    "question": "What is the main advantage of a hash table over an array?",
+    "options": ["Faster search time", "More memory-efficient", "Easier to implement", "Fixed size"],
+    "answer": 0
+},
+{
+    "question": "Which operation is performed by a dequeue in a queue?",
+    "options": ["Remove from the front", "Remove from the back", "Add to the front", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a self-balancing binary search tree?",
+    "options": ["AVL Tree", "Binary Tree", "Linked List", "Heap"],
+    "answer": 0
+},
+{
+    "question": "In which data structure is data stored in the form of a node containing a value and a pointer to the next node?",
+    "options": ["Linked List", "Array", "Queue", "Stack"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of a binary tree with `n` nodes?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which operation in a binary search tree (BST) has an average time complexity of O(log n)?",
+    "options": ["Search", "Insert", "Delete", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "In which type of data structure are elements inserted at one end and removed from the same end?",
+    "options": ["Stack", "Queue", "Linked List", "Priority Queue"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a non-linear data structure?",
+    "options": ["Tree", "Queue", "Array", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the most efficient data structure for implementing a dictionary with key-value pairs?",
+    "options": ["Hash Map", "Array", "Linked List", "Heap"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operations is NOT supported by a singly linked list?",
+    "options": ["Insert at the end", "Insert at the beginning", "Insert in the middle", "Reverse the list"],
+    "answer": 3
+},
+{
+    "question": "Which data structure is used to implement depth-first search (DFS)?",
+    "options": ["Stack", "Queue", "Tree", "Graph"],
+    "answer": 0
+},
+{
+    "question": "Which of the following data structures can have duplicate elements?",
+    "options": ["Queue", "Hash Set", "Stack", "Linked List"],
+    "answer": 3
+},
+      {
+    "question": "What is the time complexity of searching for an element in a hash table in the average case?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following data structures is most suitable for implementing recursion?",
+    "options": ["Stack", "Queue", "Linked List", "Array"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of accessing an element in a doubly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which data structure is commonly used in graph traversal algorithms like DFS and BFS?",
+    "options": ["Stack", "Queue", "Array", "Hash Table"],
+    "answer": 1
+},
+{
+    "question": "Which data structure allows insertion and deletion from both ends?",
+    "options": ["Deque", "Stack", "Queue", "Tree"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a property of a binary heap?",
+    "options": ["Complete binary tree", "Binary search tree", "Unbalanced tree", "Linked list"],
+    "answer": 0
+},
+{
+    "question": "In which type of tree is each node's left child smaller and right child greater than the node?",
+    "options": ["Binary Search Tree", "AVL Tree", "Heap", "B-tree"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the correct property of a stack?",
+    "options": ["LIFO", "FIFO", "Balanced", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a non-linear data structure?",
+    "options": ["Tree", "Array", "Queue", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity for inserting an element into a stack?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used to represent hierarchical structures?",
+    "options": ["Tree", "Graph", "Stack", "Queue"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operations is performed by the pop operation in a stack?",
+    "options": ["Removes the top element", "Adds an element to the top", "Peeks at the top element", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "In which data structure do elements maintain a specific order based on priority?",
+    "options": ["Priority Queue", "Queue", "Stack", "Hash Table"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity for searching an element in a sorted array using binary search?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which of the following data structures is used to implement an associative array?",
+    "options": ["Hash Map", "Array", "Linked List", "Heap"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity for inserting an element at the beginning of a singly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "What is the main advantage of using a doubly linked list over a singly linked list?",
+    "options": ["Can traverse both directions", "Requires less memory", "Is faster to implement", "Easier to search"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used in the implementation of the recursive function calls?",
+    "options": ["Stack", "Queue", "Linked List", "Tree"],
+    "answer": 0
+},
+{
+    "question": "In which of the following data structures can you efficiently find the minimum or maximum element?",
+    "options": ["Heap", "Queue", "Array", "Linked List"],
+    "answer": 0
+},
+      {
+    "question": "Which of the following is an example of a dynamic data structure?",
+    "options": ["Array", "Linked List", "Stack", "Queue"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of searching for an element in an unsorted array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which data structure is used to store a collection of items in no particular order and allows fast access by key?",
+    "options": ["Hash Table", "Linked List", "Array", "Stack"],
+    "answer": 0
+},
+{
+    "question": "What is the worst-case time complexity for deleting an element from a binary search tree?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which data structure is best for implementing a cache?",
+    "options": ["Hash Map", "Stack", "Queue", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true for a queue?",
+    "options": ["FIFO", "LIFO", "Ordered", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is most commonly used to perform graph traversal?",
+    "options": ["Breadth-First Search", "Binary Search", "Depth-First Search", "Dijkstra's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "In a hash table, what is the purpose of a hash function?",
+    "options": ["To generate a unique index for each element", "To sort the elements", "To ensure elements are in order", "To remove duplicates"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is most suitable for implementing undo/redo functionality?",
+    "options": ["Stack", "Queue", "Tree", "Graph"],
+    "answer": 0
+},
+{
+    "question": "In which of the following data structures is the elements' order guaranteed?",
+    "options": ["Array", "Stack", "Queue", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a graph with no cycles?",
+    "options": ["Tree", "Binary Search Tree", "DAG", "Undirected Graph"],
+    "answer": 2
+},
+{
+    "question": "What is the time complexity of deleting the top element in a stack?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which data structure would you use for implementing a scheduling system?",
+    "options": ["Queue", "Stack", "Heap", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "Which operation on a priority queue can be done in constant time?",
+    "options": ["Insert", "Extract Min", "Peek Min", "Remove Element"],
+    "answer": 2
+},
+{
+    "question": "Which of the following can be efficiently implemented using a deque?",
+    "options": ["Queue", "Stack", "Queue and Stack", "None of the above"],
+    "answer": 2
+},
+{
+    "question": "What is the time complexity of searching for an element in a balanced binary search tree?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following operations can be done efficiently in a hash map?",
+    "options": ["Insert", "Search", "Delete", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "What is the space complexity of a linked list with n elements?",
+    "options": ["O(n)", "O(1)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is useful for finding the shortest path in a graph?",
+    "options": ["Heap", "Hash Map", "Stack", "Queue"],
+    "answer": 0
+},
+      {
+    "question": "Which data structure is most suitable for implementing a recursive function?",
+    "options": ["Stack", "Queue", "Linked List", "Tree"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operations is typically O(1) for a linked list?",
+    "options": ["Search", "Insertion at the beginning", "Deletion at the end", "Accessing an element by index"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is not a characteristic of a binary search tree?",
+    "options": ["Left child is smaller than the parent", "Right child is larger than the parent", "It can have duplicate elements", "The tree is balanced"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is a correct characteristic of a circular queue?",
+    "options": ["FIFO structure", "Memory allocation is fixed", "It is dynamic", "It is a non-linear data structure"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true for a doubly linked list?",
+    "options": ["It has only one pointer per node", "Each node points to the previous and next node", "It is faster than a singly linked list", "None of the above"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity for accessing an element by index in an array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "In a binary heap, what is the time complexity for inserting a new element?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is the main advantage of using a hash map?",
+    "options": ["Constant time complexity for access", "Maintains insertion order", "No duplicates allowed", "Supports sorting"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the best way to store large amounts of data with no duplicates in a dynamic structure?",
+    "options": ["Hash Set", "Hash Map", "Linked List", "Binary Search Tree"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of the pop operation in a stack?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true about an AVL tree?",
+    "options": ["It is a self-balancing binary search tree", "It stores data in a sorted order", "The left and right subtrees of every node differ in height by at most 1", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "In a binary search tree, which of the following operations has an average time complexity of O(log n)?",
+    "options": ["Insert", "Delete", "Search", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "Which operation is usually faster for searching in a hash table compared to a linked list?",
+    "options": ["Insert", "Search", "Delete", "Traverse"],
+    "answer": 1
+},
+{
+    "question": "What is the primary disadvantage of using an array compared to a linked list?",
+    "options": ["Arrays cannot grow dynamically", "Linked lists have slower search times", "Arrays require more memory", "Arrays are not indexed"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operations on a doubly linked list takes constant time?",
+    "options": ["Insert at the beginning", "Insert at the end", "Delete a node", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "What is the primary advantage of a priority queue over a regular queue?",
+    "options": ["It can store elements with priorities", "It is faster to access elements", "It supports random access", "It is more memory-efficient"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a graph traversal algorithm?",
+    "options": ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "Which type of tree is used for implementing a priority queue?",
+    "options": ["Binary Search Tree", "Heap", "Red-Black Tree", "AVL Tree"],
+    "answer": 1
+},
+{
+    "question": "What is the space complexity of a dynamic array?",
+    "options": ["O(n)", "O(1)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operations is most commonly used in a stack?",
+    "options": ["Pop", "Push", "Peek", "All of the above"],
+    "answer": 3
+},
+      {
+    "question": "Which of the following data structures allows for constant time access to elements?",
+    "options": ["Array", "Linked List", "Hash Table", "Stack"],
+    "answer": 0
+},
+{
+    "question": "What is the best data structure for implementing an undo/redo functionality?",
+    "options": ["Stack", "Queue", "Deque", "Hash Map"],
+    "answer": 0
+},
+{
+    "question": "In a binary tree, which traversal method visits the root node last?",
+    "options": ["Pre-order", "In-order", "Post-order", "Level-order"],
+    "answer": 2
+},
+{
+    "question": "What is the worst-case time complexity for searching in an unsorted linked list?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is not a type of balanced tree?",
+    "options": ["AVL Tree", "Red-Black Tree", "B Tree", "Binary Search Tree"],
+    "answer": 3
+},
+{
+    "question": "Which of the following is the most common use of a hash map?",
+    "options": ["Storing key-value pairs", "Implementing a stack", "Implementing a queue", "Sorting data"],
+    "answer": 0
+},
+{
+    "question": "Which of the following data structures is optimal for implementing a LRU (Least Recently Used) cache?",
+    "options": ["Queue", "Linked List", "Hash Map", "Deque"],
+    "answer": 2
+},
+{
+    "question": "Which of the following data structures can have multiple parents for a single node?",
+    "options": ["Binary Tree", "General Tree", "Heap", "Linked List"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is the best data structure to implement a round-robin scheduling algorithm?",
+    "options": ["Queue", "Stack", "Deque", "Priority Queue"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operations is the slowest on a doubly linked list?",
+    "options": ["Insertion at the end", "Insertion at the beginning", "Deletion", "Accessing an element by index"],
+    "answer": 3
+},
+{
+    "question": "What is the space complexity of a linked list with n elements?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which algorithm is most commonly used to traverse a binary tree in depth-first order?",
+    "options": ["Breadth-First Search", "Depth-First Search", "Dijkstra's Algorithm", "Kruskal's Algorithm"],
+    "answer": 1
+},
+{
+    "question": "Which of the following data structures uses a FIFO (First-In-First-Out) approach?",
+    "options": ["Stack", "Queue", "Heap", "Linked List"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is a characteristic of a circular linked list?",
+    "options": ["The last node points to the first node", "It can only be singly linked", "The head node points to itself", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "In which of the following scenarios would a queue be most useful?",
+    "options": ["Scheduling tasks in a CPU", "Checking whether an expression is balanced", "Simulating a maze traversal", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operations can be done in O(1) time for a deque?",
+    "options": ["Insert at the front", "Insert at the back", "Remove from the front", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "Which data structure uses a heap for priority-based operations?",
+    "options": ["Linked List", "Stack", "Queue", "Priority Queue"],
+    "answer": 3
+},
+{
+    "question": "In which type of tree does every node have at most two children?",
+    "options": ["Binary Tree", "Ternary Tree", "Quad Tree", "General Tree"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is best for finding the shortest path in an unweighted graph?",
+    "options": ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "Bellman-Ford Algorithm"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of inserting an element in a heap?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 1
+},
+      {
+    "question": "Which of the following data structures is best suited for implementing an expression tree?",
+    "options": ["Stack", "Queue", "Tree", "Graph"],
+    "answer": 2
+},
+{
+    "question": "Which sorting algorithm has the best worst-case time complexity?",
+    "options": ["Quick Sort", "Merge Sort", "Bubble Sort", "Selection Sort"],
+    "answer": 1
+},
+{
+    "question": "What is the space complexity of quicksort in the worst case?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "In a doubly linked list, how many pointers does each node have?",
+    "options": ["One", "Two", "Three", "Four"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of accessing an element in a hash map?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following data structures is ideal for storing a collection of items with different priorities?",
+    "options": ["Stack", "Queue", "Priority Queue", "Deque"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is a key property of a red-black tree?",
+    "options": ["All nodes are either red or black", "It is a complete binary tree", "It supports only left rotations", "It can have duplicate values"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to find the shortest path in a graph with weighted edges?",
+    "options": ["BFS", "DFS", "Dijkstra's Algorithm", "Kruskal's Algorithm"],
+    "answer": 2
+},
+{
+    "question": "Which of the following best describes a depth-first search traversal in a graph?",
+    "options": ["Visiting all nodes at each level", "Visiting each node once", "Exploring as far as possible along each branch", "None of the above"],
+    "answer": 2
+},
+{
+    "question": "What is the worst-case time complexity for searching in a binary search tree?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "What is the time complexity of inserting an element into a balanced binary search tree?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 1
+},
+{
+    "question": "Which data structure is used for storing an undo history in most applications?",
+    "options": ["Queue", "Stack", "Tree", "Linked List"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is true about a queue?",
+    "options": ["It is a LIFO data structure", "It is a FIFO data structure", "It is implemented using a tree", "It is a type of stack"],
+    "answer": 1
+},
+{
+    "question": "Which of the following algorithms can be used for finding connected components in a graph?",
+    "options": ["BFS", "DFS", "Dijkstra's Algorithm", "Prim's Algorithm"],
+    "answer": 1
+},
+{
+    "question": "Which of the following data structures can be used to implement a breadth-first search?",
+    "options": ["Stack", "Queue", "Tree", "Heap"],
+    "answer": 1
+},
+{
+    "question": "Which sorting algorithm is considered the most efficient in terms of average time complexity for sorting a large dataset?",
+    "options": ["Bubble Sort", "Merge Sort", "Quick Sort", "Insertion Sort"],
+    "answer": 2
+},
+{
+    "question": "What is the main disadvantage of using a hash table?",
+    "options": ["High space complexity", "Collision handling", "Slow insertion", "High time complexity for search"],
+    "answer": 1
+},
+{
+    "question": "Which data structure is used in implementing a depth-first search algorithm?",
+    "options": ["Queue", "Stack", "Array", "Heap"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of deleting the minimum element from a binary heap?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 1
+},
+{
+    "question": "What is the space complexity of a depth-first search algorithm?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+      {
+    "question": "Which of the following is a characteristic of a binary search tree?",
+    "options": ["All nodes have exactly two children", "In-order traversal gives nodes in sorted order", "It is a complete binary tree", "It does not allow duplicate elements"],
+    "answer": 1
+},
+{
+    "question": "In which type of data structure are elements stored in a circular fashion?",
+    "options": ["Stack", "Queue", "Circular Queue", "Binary Search Tree"],
+    "answer": 2
+},
+{
+    "question": "What is the space complexity of a binary tree with n nodes?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which of the following sorting algorithms is unstable?",
+    "options": ["Quick Sort", "Merge Sort", "Heap Sort", "Insertion Sort"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used to implement recursion?",
+    "options": ["Queue", "Stack", "Array", "Linked List"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of finding the largest element in an unsorted array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which algorithm is used for finding the minimum spanning tree of a graph?",
+    "options": ["Dijkstra's Algorithm", "Prim's Algorithm", "Bellman-Ford Algorithm", "Kruskal's Algorithm"],
+    "answer": 1
+},
+{
+    "question": "Which of the following data structures uses the principle of Last In, First Out (LIFO)?",
+    "options": ["Queue", "Stack", "List", "Tree"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of searching for an element in a hash table?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "In which data structure is the first element removed first?",
+    "options": ["Stack", "Queue", "Priority Queue", "Hash Map"],
+    "answer": 1
+},
+{
+    "question": "What is the primary advantage of using a heap data structure?",
+    "options": ["Faster search operations", "Efficient sorting", "Efficient retrieval of the minimum/maximum element", "Supports dynamic memory allocation"],
+    "answer": 2
+},
+{
+    "question": "What is the time complexity of inserting an element into a priority queue implemented with a binary heap?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is a characteristic of a depth-first search algorithm?",
+    "options": ["It visits nodes level by level", "It uses a queue to store nodes", "It explores as far as possible down each branch before backtracking", "It guarantees the shortest path in an unweighted graph"],
+    "answer": 2
+},
+{
+    "question": "What type of traversal is used to visit nodes in a binary tree in a left-right-root order?",
+    "options": ["Preorder", "Inorder", "Postorder", "Level-order"],
+    "answer": 1
+},
+{
+    "question": "Which of the following algorithms is used for sorting elements in O(n) time in the best case?",
+    "options": ["Quick Sort", "Merge Sort", "Counting Sort", "Heap Sort"],
+    "answer": 2
+},
+{
+    "question": "What is the worst-case time complexity of bubble sort?",
+    "options": ["O(1)", "O(n)", "O(n^2)", "O(n log n)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is true about a stack?",
+    "options": ["Elements can be accessed in any order", "Elements are processed in a LIFO manner", "It is typically implemented using a linked list", "It is used to implement breadth-first search"],
+    "answer": 1
+},
+{
+    "question": "In which data structure do elements follow the First In, First Out (FIFO) principle?",
+    "options": ["Stack", "Queue", "Priority Queue", "Hash Map"],
+    "answer": 1
+},
+{
+    "question": "Which of the following operations in a binary heap has the best time complexity?",
+    "options": ["Insert", "Delete", "Search", "Find Min/Max"],
+    "answer": 3
+},
+{
+    "question": "Which of the following algorithms is used for the divide-and-conquer paradigm?",
+    "options": ["Insertion Sort", "Merge Sort", "Quick Sort", "Both Merge and Quick Sort"],
+    "answer": 3
+},
+      {
+    "question": "Which of the following is true about a doubly linked list?",
+    "options": ["Each node has two pointers, one for the next node and one for the previous node", "It allows access to elements by index", "It is more efficient than a singly linked list in all operations", "Nodes are stored contiguously in memory"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of inserting an element at the beginning of a singly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following sorting algorithms is the most efficient in terms of time complexity for large datasets?",
+    "options": ["Bubble Sort", "Merge Sort", "Insertion Sort", "Selection Sort"],
+    "answer": 1
+},
+{
+    "question": "Which data structure is typically used to implement a priority queue?",
+    "options": ["Stack", "Queue", "Heap", "Hash Table"],
+    "answer": 2
+},
+{
+    "question": "What is the time complexity of accessing an element in an array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following statements is true for a hash table?",
+    "options": ["Hash tables always guarantee no collisions", "The size of the hash table is always fixed", "They provide fast access to elements using keys", "The elements in a hash table are stored in sorted order"],
+    "answer": 2
+},
+{
+    "question": "Which algorithm is best suited for finding the shortest path in a weighted graph?",
+    "options": ["Dijkstra's Algorithm", "Prim's Algorithm", "A* Algorithm", "Breadth-First Search"],
+    "answer": 0
+},
+{
+    "question": "In which of the following scenarios is a depth-first search (DFS) preferable over a breadth-first search (BFS)?",
+    "options": ["When you need the shortest path", "When memory is limited", "When the graph is very deep", "When all nodes are at the same level"],
+    "answer": 2
+},
+{
+    "question": "What is the space complexity of a recursive algorithm?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which of the following data structures is used to implement an algorithm for checking balanced parentheses?",
+    "options": ["Queue", "Stack", "Array", "Tree"],
+    "answer": 1
+},
+{
+    "question": "Which of the following algorithms is a greedy algorithm?",
+    "options": ["Quick Sort", "Merge Sort", "Dijkstra's Algorithm", "Kruskal's Algorithm"],
+    "answer": 3
+},
+{
+    "question": "What is the worst-case time complexity of merge sort?",
+    "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+    "answer": 1
+},
+{
+    "question": "Which of the following statements is true for a queue?",
+    "options": ["Elements are processed in a Last In, First Out manner", "Elements are processed in a First In, First Out manner", "Queue can be implemented using only arrays", "Queue is typically used for recursive operations"],
+    "answer": 1
+},
+{
+    "question": "Which type of binary tree allows each node to have up to two children but does not necessarily enforce the order of the elements?",
+    "options": ["Binary Search Tree", "Full Binary Tree", "Complete Binary Tree", "General Binary Tree"],
+    "answer": 3
+},
+{
+    "question": "What is the primary use of a circular queue?",
+    "options": ["To implement a stack", "To simulate resource sharing in computer systems", "To store data in a LIFO manner", "To store nodes in a binary search tree"],
+    "answer": 1
+},
+{
+    "question": "Which sorting algorithm works by dividing the array into two sub-arrays and recursively sorting them?",
+    "options": ["Bubble Sort", "Merge Sort", "Quick Sort", "Insertion Sort"],
+    "answer": 1
+},
+{
+    "question": "Which of the following statements is true about a binary search tree?",
+    "options": ["It is always balanced", "It allows efficient searching, insertion, and deletion", "It stores nodes in sorted order at all levels", "It is always a complete tree"],
+    "answer": 1
+},
+{
+    "question": "Which of the following operations is not supported by a stack?",
+    "options": ["Push", "Pop", "Peek", "Delete"],
+    "answer": 3
+},
+{
+    "question": "What is the time complexity of searching for an element in a linked list?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following data structures can represent hierarchical relationships?",
+    "options": ["Stack", "Queue", "Binary Tree", "Hash Table"],
+    "answer": 2
+},
+      {
+    "question": "What is the time complexity of insertion in a doubly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "What is the worst-case time complexity of bubble sort?",
+    "options": ["O(1)", "O(n log n)", "O(n^2)", "O(log n)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following algorithms is used for finding the shortest path in an unweighted graph?",
+    "options": ["Dijkstra's Algorithm", "A* Algorithm", "Floyd-Warshall Algorithm", "Breadth-First Search"],
+    "answer": 3
+},
+{
+    "question": "What is the key characteristic of a stack data structure?",
+    "options": ["Last In, First Out (LIFO)", "First In, First Out (FIFO)", "Direct Access", "Balanced Operations"],
+    "answer": 0
+},
+{
+    "question": "In a binary search tree, the left child of a node contains:",
+    "options": ["A value greater than the parent", "A value smaller than the parent", "The same value as the parent", "A random value"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is a characteristic of a heap?",
+    "options": ["It is a complete binary tree", "It is a binary search tree", "It is always balanced", "It allows direct access to any element"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operations in a binary search tree requires O(log n) time complexity in the best case?",
+    "options": ["Insertion", "Searching", "Deletion", "Traversal"],
+    "answer": 1
+},
+{
+    "question": "Which of the following algorithms is used for sorting an array of elements with minimal space complexity?",
+    "options": ["Merge Sort", "Quick Sort", "Insertion Sort", "Bubble Sort"],
+    "answer": 2
+},
+{
+    "question": "What is the purpose of a priority queue?",
+    "options": ["To store elements in sorted order", "To retrieve elements in order of priority", "To insert elements at the front", "To implement a queue with limited capacity"],
+    "answer": 1
+},
+{
+    "question": "What is the space complexity of a binary search tree with n nodes?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which data structure is typically used to implement undo operations in software?",
+    "options": ["Queue", "Stack", "Heap", "Hash Table"],
+    "answer": 1
+},
+{
+    "question": "Which sorting algorithm divides the data into smaller parts and then combines them in sorted order?",
+    "options": ["Bubble Sort", "Merge Sort", "Quick Sort", "Insertion Sort"],
+    "answer": 1
+},
+{
+    "question": "Which type of tree is best used for implementing a priority queue?",
+    "options": ["Binary Search Tree", "Heap", "AVL Tree", "Red-Black Tree"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is the correct definition of a queue?",
+    "options": ["A data structure that stores elements in FIFO order", "A data structure that stores elements in LIFO order", "A dynamic array that stores elements randomly", "A data structure that allows direct access to elements"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a characteristic of a complete binary tree?",
+    "options": ["All levels except the last are completely filled", "Each node has at most two children", "It is a type of binary search tree", "Nodes are stored contiguously in memory"],
+    "answer": 0
+},
+{
+    "question": "Which sorting algorithm is considered inefficient for large datasets due to its time complexity?",
+    "options": ["Bubble Sort", "Merge Sort", "Quick Sort", "Heap Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true for a doubly linked list compared to a singly linked list?",
+    "options": ["It has a pointer to the previous node", "It has a smaller memory footprint", "It is less efficient for operations like insertion", "It requires less time for traversal"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity for deleting a node from a doubly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to find the minimum spanning tree of a graph?",
+    "options": ["Prim's Algorithm", "Dijkstra's Algorithm", "Floyd-Warshall Algorithm", "Breadth-First Search"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a non-recursive way to traverse a binary tree?",
+    "options": ["Inorder Traversal", "Postorder Traversal", "Level Order Traversal", "Preorder Traversal"],
+    "answer": 2
+},
+      {
+    "question": "What is the time complexity of accessing an element in an array by index?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the best sorting algorithm for nearly sorted data?",
+    "options": ["Bubble Sort", "Quick Sort", "Insertion Sort", "Merge Sort"],
+    "answer": 2
+},
+{
+    "question": "What is the space complexity of the merge sort algorithm?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is not a property of a hash table?",
+    "options": ["Constant time complexity for searching", "Uses a hash function to map keys to indices", "Elements are stored in order", "Can have collisions that require handling"],
+    "answer": 2
+},
+{
+    "question": "In which scenario is a depth-first search (DFS) preferred over breadth-first search (BFS)?",
+    "options": ["Finding the shortest path in an unweighted graph", "Exploring all nodes at the current level", "Exploring a path to its deepest node first", "When memory usage is not a concern"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is a disadvantage of using a linked list over an array?",
+    "options": ["Linked lists have fixed sizes", "Linked lists cannot store different data types", "Linked lists require extra memory for pointers", "Arrays are slower for insertion and deletion"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is true for a binary heap?",
+    "options": ["It is a complete binary tree", "It is a type of binary search tree", "It allows quick insertion but slow deletion", "It does not support priority ordering"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a characteristic of a depth-first search (DFS) traversal?",
+    "options": ["It explores nodes in a level-order manner", "It explores as deep as possible before backtracking", "It uses a queue for storing nodes", "It is slower than breadth-first search"],
+    "answer": 1
+},
+{
+    "question": "In a hash table, what happens when two keys hash to the same index?",
+    "options": ["The elements are overwritten", "The second element is added to a linked list", "The second element is ignored", "A new hash function is generated"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is the most efficient sorting algorithm for large datasets in terms of time complexity?",
+    "options": ["Bubble Sort", "Merge Sort", "Insertion Sort", "Quick Sort"],
+    "answer": 3
+},
+{
+    "question": "Which of the following operations in a binary search tree is O(log n) in the best case?",
+    "options": ["Insertion", "Traversal", "Searching", "Deletion"],
+    "answer": 2
+},
+{
+    "question": "Which of the following data structures is used to implement recursion?",
+    "options": ["Stack", "Queue", "Array", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of finding the minimum element in a max heap?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is typically used for implementing a breadth-first search?",
+    "options": ["Stack", "Queue", "Priority Queue", "Binary Search Tree"],
+    "answer": 1
+},
+{
+    "question": "Which sorting algorithm is most efficient in terms of average time complexity?",
+    "options": ["Bubble Sort", "Merge Sort", "Quick Sort", "Selection Sort"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is a characteristic of a red-black tree?",
+    "options": ["It is a type of binary search tree", "It is a complete binary tree", "It does not allow duplicate values", "It has no balancing criteria"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of searching for an element in an unsorted array?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following operations is typically performed in O(n) time in a linked list?",
+    "options": ["Insertion at the head", "Traversal", "Deletion at the tail", "Search by value"],
+    "answer": 1
+},
+{
+    "question": "Which of the following algorithms is suitable for finding the shortest path in a weighted graph?",
+    "options": ["Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Prim's Algorithm", "A* Algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of deleting the head node in a singly linked list?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 0
+}
+    ],
+             "algorithms": [
+    {
+      "question": "What is the worst-case time complexity of QuickSort?",
+      "options": ["O(n)", "O(n log n)", "O(n²)", "O(2ⁿ)"],
+      "answer": 2
+    },
+    {
+      "question": "Which algorithm is commonly used for finding the shortest path in a weighted graph?",
+      "options": ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "Binary Search"],
+      "answer": 2
+    },
+    {
+      "question": "Which sorting algorithm is most efficient for nearly sorted arrays?",
+      "options": ["Quick Sort", "Merge Sort", "Bubble Sort", "Insertion Sort"],
+      "answer": 3
+    },
+    {
+      "question": "What technique does dynamic programming use to solve complex problems?",
+      "options": ["Divide and conquer", "Greedy approach", "Memorization of subproblems", "Random sampling"],
+      "answer": 2
+    },
+    {
+      "question": "Which algorithm is used to find a specific value in a sorted array?",
+      "options": ["Linear Search", "Binary Search", "Bubble Sort", "Depth-First Search"],
+      "answer": 1
+    },
+      {
+    "question": "Which of the following algorithms is used to find the shortest path in a weighted graph?",
+    "options": ["Dijkstra's Algorithm", "Floyd-Warshall Algorithm", "Bellman-Ford Algorithm", "Prim's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of binary search in a sorted array?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 1
+},
+{
+    "question": "Which algorithm is most suitable for solving problems involving minimum spanning trees?",
+    "options": ["Kruskal's Algorithm", "Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is commonly used for sorting large datasets that do not fit in memory?",
+    "options": ["Merge Sort", "Quick Sort", "Heap Sort", "External Merge Sort"],
+    "answer": 3
+},
+{
+    "question": "What is the time complexity of the best case for quicksort?",
+    "options": ["O(n log n)", "O(log n)", "O(n^2)", "O(n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is used for solving dynamic programming problems?",
+    "options": ["Floyd-Warshall Algorithm", "Kadane's Algorithm", "Knapsack Problem Algorithm", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "Which algorithm is based on the divide-and-conquer technique?",
+    "options": ["Merge Sort", "Insertion Sort", "Selection Sort", "Bubble Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true about the merge sort algorithm?",
+    "options": ["It is a stable sort", "It is an in-place sort", "It has O(n) space complexity", "It works faster than quicksort on average"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of quicksort?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which algorithm is used for solving the traveling salesman problem?",
+    "options": ["Greedy Algorithm", "Dynamic Programming", "Branch and Bound", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "What is the time complexity of finding the largest element in an unsorted array?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which algorithm is the most efficient for searching in a balanced binary search tree?",
+    "options": ["Linear Search", "Binary Search", "Depth-First Search", "Breadth-First Search"],
+    "answer": 1
+},
+{
+    "question": "Which of the following algorithms is used for topological sorting in a directed acyclic graph?",
+    "options": ["Depth-First Search", "Kruskal's Algorithm", "Bellman-Ford Algorithm", "Dijkstra's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is the worst-case time complexity of bubble sort?",
+    "options": ["O(1)", "O(n log n)", "O(n^2)", "O(n)"],
+    "answer": 2
+},
+{
+    "question": "Which algorithm uses a priority queue to find the minimum spanning tree?",
+    "options": ["Prim's Algorithm", "Kruskal's Algorithm", "Dijkstra's Algorithm", "Bellman-Ford Algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of finding the greatest common divisor (GCD) using Euclid's algorithm?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is not based on divide-and-conquer?",
+    "options": ["Merge Sort", "Quick Sort", "Heap Sort", "Binary Search"],
+    "answer": 2
+},
+{
+    "question": "Which algorithm is used for the knapsack problem with unbounded items?",
+    "options": ["Dynamic Programming", "Greedy Algorithm", "Backtracking", "All of the above"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms has the best average case time complexity for sorting?",
+    "options": ["Quick Sort", "Merge Sort", "Insertion Sort", "Heap Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is used for string matching in a text?",
+    "options": ["Knuth-Morris-Pratt Algorithm", "Bubble Sort", "Quick Sort", "Heap Sort"],
+    "answer": 0
+},
+      {
+    "question": "What is the worst-case time complexity of insertion sort?",
+    "options": ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"],
+    "answer": 1
+},
+{
+    "question": "Which algorithm is used for finding the shortest path in a weighted graph with negative weights?",
+    "options": ["Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Prim's Algorithm", "A* Algorithm"],
+    "answer": 1
+},
+{
+    "question": "Which of the following algorithms is efficient for finding the median of a dataset?",
+    "options": ["Quickselect", "Merge Sort", "Insertion Sort", "Binary Search"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm solves the Longest Common Subsequence problem?",
+    "options": ["Dynamic Programming", "Greedy Algorithm", "Brute Force", "Divide and Conquer"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of an optimized bubble sort algorithm?",
+    "options": ["O(n)", "O(n log n)", "O(n^2)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for finding the least common ancestor in a binary tree?",
+    "options": ["Depth-First Search", "Binary Search", "Lowest Common Ancestor Algorithm", "Breadth-First Search"],
+    "answer": 2
+},
+{
+    "question": "Which sorting algorithm is based on the concept of selecting the minimum element from an unsorted part and swapping it with the leftmost unsorted element?",
+    "options": ["Selection Sort", "Bubble Sort", "Insertion Sort", "Merge Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the correct time complexity of performing a binary search on a sorted array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    "answer": 2
+},
+{
+    "question": "Which algorithm is best suited for finding the maximum subarray sum in an array?",
+    "options": ["Kadane's Algorithm", "Dynamic Programming", "Greedy Algorithm", "Divide and Conquer"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to find the intersection of two sorted arrays?",
+    "options": ["Merge Algorithm", "Binary Search", "Hashing", "Quick Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of counting the number of inversions in an array using merge sort?",
+    "options": ["O(n log n)", "O(n^2)", "O(log n)", "O(n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is most efficient for finding the kth smallest element in an unsorted array?",
+    "options": ["Quickselect Algorithm", "Merge Sort", "Heap Sort", "Quick Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true about the Fibonacci sequence?",
+    "options": ["It is a sequence of numbers where each number is the sum of the two preceding ones", "It is an arithmetic progression", "It is a geometric progression", "None of the above"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of heapify in a binary heap?",
+    "options": ["O(log n)", "O(n log n)", "O(n)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for solving the N-Queens problem?",
+    "options": ["Backtracking", "Dynamic Programming", "Greedy Algorithm", "Divide and Conquer"],
+    "answer": 0
+},
+{
+    "question": "Which sorting algorithm is preferred for data that is already nearly sorted?",
+    "options": ["Insertion Sort", "Selection Sort", "Quick Sort", "Merge Sort"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to find the shortest path in a graph where all edges have equal weight?",
+    "options": ["Dijkstra's Algorithm", "Breadth-First Search", "A* Algorithm", "Bellman-Ford Algorithm"],
+    "answer": 1
+},
+{
+    "question": "What is the average-case time complexity of quicksort?",
+    "options": ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for constructing a Huffman Tree for data compression?",
+    "options": ["Greedy Algorithm", "Dynamic Programming", "Merge Sort", "Breadth-First Search"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for solving problems involving the shortest path in a graph with positive weights?",
+    "options": ["Floyd-Warshall Algorithm", "Bellman-Ford Algorithm", "Dijkstra's Algorithm", "Prim's Algorithm"],
+    "answer": 2
+},
+        {
+    "question": "What is the primary difference between Merge Sort and Quick Sort?",
+    "options": ["Merge Sort is recursive, while Quick Sort is iterative", "Merge Sort is faster in practice, while Quick Sort is slower", "Merge Sort divides the array into two equal parts, Quick Sort picks a pivot element", "Merge Sort uses a pivot element, while Quick Sort does not"],
+    "answer": 2
+},
+{
+    "question": "Which algorithm is commonly used to find the maximum flow in a flow network?",
+    "options": ["Ford-Fulkerson Algorithm", "Bellman-Ford Algorithm", "Dijkstra's Algorithm", "Kruskal's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm uses the divide-and-conquer approach and divides the problem into smaller subproblems of the same type?",
+    "options": ["Merge Sort", "Insertion Sort", "Bubble Sort", "Selection Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a greedy algorithm?",
+    "options": ["Kruskal's Algorithm", "Merge Sort", "Binary Search", "Breadth-First Search"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used to implement a priority queue?",
+    "options": ["Binary Heap", "Linked List", "Hash Table", "Stack"],
+    "answer": 0
+},
+{
+    "question": "What is the main advantage of the A* algorithm over Dijkstra's algorithm?",
+    "options": ["A* algorithm uses heuristics to guide the search towards the goal", "A* algorithm guarantees the shortest path", "Dijkstra's algorithm is faster than A*", "A* algorithm is used for searching in unweighted graphs"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to detect cycles in a directed graph?",
+    "options": ["DFS with backtracking", "Kruskal's Algorithm", "Prim's Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which of the following sorting algorithms is based on the concept of partitioning the array into two parts?",
+    "options": ["Quick Sort", "Bubble Sort", "Heap Sort", "Merge Sort"],
+    "answer": 0
+},
+{
+    "question": "Which sorting algorithm has the worst-case time complexity of O(n log n)?",
+    "options": ["Merge Sort", "Bubble Sort", "Selection Sort", "Insertion Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of an AVL tree's insertion operation?",
+    "options": ["O(log n)", "O(n)", "O(log n) for balance factor updates", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for finding the shortest path from a source vertex to all other vertices in a graph?",
+    "options": ["Bellman-Ford Algorithm", "Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm"],
+    "answer": 1
+},
+{
+    "question": "What is the main advantage of the greedy approach in algorithm design?",
+    "options": ["It always leads to the optimal solution", "It solves the problem by breaking it into smaller subproblems", "It chooses the locally optimal choice at each step", "It guarantees the best performance in terms of time complexity"],
+    "answer": 2
+},
+{
+    "question": "Which algorithm is used for finding the longest path in a directed acyclic graph (DAG)?",
+    "options": ["Dynamic Programming", "Depth-First Search", "Topological Sorting", "Dijkstra's Algorithm"],
+    "answer": 2
+},
+{
+    "question": "What is the space complexity of the Merge Sort algorithm?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a non-comparative sorting algorithm?",
+    "options": ["Radix Sort", "Bubble Sort", "Insertion Sort", "Selection Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of accessing an element in an array?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following data structures can be used to implement Depth-First Search (DFS)?",
+    "options": ["Stack", "Queue", "Array", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "Which sorting algorithm can be classified as a stable sort?",
+    "options": ["Merge Sort", "Quick Sort", "Selection Sort", "Heap Sort"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is best suited for implementing a breadth-first search (BFS)?",
+    "options": ["Queue", "Stack", "Binary Tree", "Array"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to find the minimum spanning tree of a graph?",
+    "options": ["Prim's Algorithm", "Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+      {
+    "question": "What is the time complexity of the Best-First Search algorithm?",
+    "options": ["O(n)", "O(n^2)", "O(log n)", "Depends on the heuristic used"],
+    "answer": 3
+},
+{
+    "question": "Which of the following algorithms can be used to find the shortest path in an unweighted graph?",
+    "options": ["Breadth-First Search", "Dijkstra's Algorithm", "A* Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a divide-and-conquer algorithm?",
+    "options": ["Merge Sort", "Selection Sort", "Insertion Sort", "Bubble Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of Quick Sort in the worst case?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(n^2)"],
+    "answer": 3
+},
+{
+    "question": "Which algorithm is primarily used for solving the traveling salesman problem (TSP)?",
+    "options": ["Dynamic Programming", "Greedy Algorithm", "Branch and Bound", "Backtracking"],
+    "answer": 2
+},
+{
+    "question": "Which sorting algorithm works by comparing and swapping adjacent elements?",
+    "options": ["Bubble Sort", "Merge Sort", "Insertion Sort", "Selection Sort"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for balancing a binary search tree?",
+    "options": ["AVL Tree Rotation", "Quick Sort", "Dijkstra's Algorithm", "Bellman-Ford Algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is the main disadvantage of the bubble sort algorithm?",
+    "options": ["It is slow on large datasets", "It requires extra space", "It is not stable", "It cannot sort negative numbers"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a disadvantage of using a hash table?",
+    "options": ["High memory usage", "Low time complexity for search operations", "Collision resolution issues", "It cannot store large datasets"],
+    "answer": 2
+},
+{
+    "question": "What is the time complexity of the binary search algorithm?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    "answer": 1
+},
+{
+    "question": "Which of the following graph traversal algorithms is best suited for finding the shortest path in an unweighted graph?",
+    "options": ["Breadth-First Search", "Depth-First Search", "Dijkstra's Algorithm", "A* Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used to implement the Dijkstra's shortest path algorithm?",
+    "options": ["Min-Heap", "Stack", "Queue", "Binary Search Tree"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for topological sorting of a directed acyclic graph?",
+    "options": ["Depth-First Search", "Breadth-First Search", "Quick Sort", "Merge Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a stable sorting algorithm?",
+    "options": ["Merge Sort", "Heap Sort", "Quick Sort", "Selection Sort"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is best for finding the shortest path in a weighted graph with negative weights?",
+    "options": ["Bellman-Ford Algorithm", "Dijkstra's Algorithm", "Floyd-Warshall Algorithm", "A* Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to find the shortest path from a source node to all other nodes in a graph with non-negative weights?",
+    "options": ["Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Prim's Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is known for solving the knapsack problem?",
+    "options": ["Greedy Algorithm", "Dynamic Programming", "Branch and Bound", "Backtracking"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of the Merge Sort algorithm?",
+    "options": ["O(n)", "O(n log n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is an example of a backtracking algorithm?",
+    "options": ["Knapsack Problem", "DFS", "Bellman-Ford Algorithm", "Sudoku Solver"],
+    "answer": 3
+},
+{
+    "question": "Which type of graph algorithm does not guarantee an optimal solution but is often faster?",
+    "options": ["Greedy Algorithm", "Dynamic Programming", "Backtracking", "Branch and Bound"],
+    "answer": 0
+},
+      {
+    "question": "Which data structure is typically used to implement a breadth-first search (BFS)?",
+    "options": ["Queue", "Stack", "Linked List", "Array"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of insertion sort in the best case scenario?",
+    "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm can be used to find the minimum spanning tree of a graph?",
+    "options": ["Kruskal's Algorithm", "Bellman-Ford Algorithm", "Dijkstra's Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true for the quick sort algorithm?",
+    "options": ["It is a divide-and-conquer algorithm", "It is a stable sorting algorithm", "It has O(n^2) time complexity in the best case", "It does not require recursion"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used to implement a depth-first search (DFS)?",
+    "options": ["Stack", "Queue", "Linked List", "Array"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of heap sort in the worst case?",
+    "options": ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"],
+    "answer": 0
+},
+{
+    "question": "What is the primary characteristic of a greedy algorithm?",
+    "options": ["It chooses the best solution at each step", "It considers all possible solutions", "It uses recursion", "It guarantees an optimal solution"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an advantage of using a linked list over an array?",
+    "options": ["Dynamic memory allocation", "Faster random access", "Constant-time indexing", "Lower memory usage"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is NOT a characteristic of dynamic programming?",
+    "options": ["Overlapping subproblems", "Optimal substructure", "Greedy approach", "Memoization"],
+    "answer": 2
+},
+{
+    "question": "Which algorithm is used to find the shortest path in a weighted graph?",
+    "options": ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which sorting algorithm is best used for nearly sorted data?",
+    "options": ["Insertion Sort", "Merge Sort", "Quick Sort", "Heap Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a disadvantage of using a binary search tree?",
+    "options": ["Unbalanced trees can degrade performance", "It requires a large amount of memory", "It cannot handle negative numbers", "It has O(n) search time"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a non-comparison-based sorting algorithm?",
+    "options": ["Radix Sort", "Merge Sort", "Quick Sort", "Heap Sort"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the correct order of time complexity from fastest to slowest?",
+    "options": ["O(1), O(log n), O(n), O(n log n), O(n^2)", "O(n^2), O(n), O(log n), O(1), O(n log n)", "O(n log n), O(n), O(1), O(n^2), O(log n)", "O(log n), O(1), O(n), O(n^2), O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of the merge sort algorithm?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the most efficient algorithm for finding the kth smallest element in an unsorted array?",
+    "options": ["Quick Select", "Merge Sort", "Heap Sort", "Binary Search"],
+    "answer": 0
+},
+{
+    "question": "Which of the following graph traversal methods is best for finding all possible paths between two nodes in a graph?",
+    "options": ["Depth-First Search", "Breadth-First Search", "Dijkstra's Algorithm", "A* Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to find the maximum flow in a flow network?",
+    "options": ["Ford-Fulkerson Algorithm", "Kruskal's Algorithm", "Bellman-Ford Algorithm", "Dijkstra's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of the breadth-first search algorithm?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    "answer": 0
+},
+      {
+    "question": "Which data structure is used in implementing a priority queue?",
+    "options": ["Heap", "Stack", "Queue", "Array"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of searching for an element in a balanced binary search tree (BST)?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is typically used for finding the shortest path in an unweighted graph?",
+    "options": ["Breadth-First Search", "Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true about quicksort?",
+    "options": ["It is an in-place sorting algorithm", "It is always faster than merge sort", "It is a stable sorting algorithm", "It always guarantees O(n log n) time complexity"],
+    "answer": 0
+},
+{
+    "question": "Which of the following sorting algorithms is considered the most efficient in practice for large datasets?",
+    "options": ["Merge Sort", "Quick Sort", "Heap Sort", "Insertion Sort"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of inserting an element in a hash table (average case)?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "What is the primary advantage of using a hash table for storing data?",
+    "options": ["Fast access time for searching", "Low memory usage", "Faster sorting", "Simplicity of implementation"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is used for finding the minimum spanning tree of a graph?",
+    "options": ["Prim's Algorithm", "Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Kruskal's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a type of divide-and-conquer algorithm?",
+    "options": ["Merge Sort", "Bubble Sort", "Insertion Sort", "Selection Sort"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is typically used for implementing recursion?",
+    "options": ["Stack", "Queue", "Linked List", "Array"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is most efficient for finding the shortest path in a graph with non-negative edge weights?",
+    "options": ["Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm", "Prim's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a disadvantage of using a binary heap for implementing a priority queue?",
+    "options": ["It has O(n) time complexity for insertions", "It does not allow duplicate elements", "It has O(log n) time complexity for deletions", "It does not guarantee the heap property"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of deleting an element from a binary heap?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true about the merge sort algorithm?",
+    "options": ["It has O(n log n) time complexity in all cases", "It is an in-place sorting algorithm", "It is faster than quick sort on average", "It does not require extra space"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true for a red-black tree?",
+    "options": ["It is a self-balancing binary search tree", "It guarantees O(n) time complexity for all operations", "It is an unbalanced tree", "It is a heap-based data structure"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to solve the traveling salesman problem (TSP)?",
+    "options": ["Dynamic Programming", "Greedy Algorithm", "Backtracking", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "Which algorithm is used to find the longest common subsequence between two sequences?",
+    "options": ["Dynamic Programming", "Greedy Algorithm", "Divide and Conquer", "Backtracking"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used to implement a breadth-first search algorithm?",
+    "options": ["Queue", "Stack", "Heap", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of binary search in a sorted array?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true about the bubble sort algorithm?",
+    "options": ["It is a stable sorting algorithm", "It is faster than quick sort on average", "It has O(n log n) time complexity in the worst case", "It is an in-place sorting algorithm"],
+    "answer": 0
+},
+      {
+    "question": "Which data structure is used to implement a depth-first search (DFS)?",
+    "options": ["Stack", "Queue", "Heap", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "What is the best case time complexity of quicksort?",
+    "options": ["O(n log n)", "O(n)", "O(n^2)", "O(log n)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for sorting linked lists?",
+    "options": ["Merge Sort", "Quick Sort", "Bubble Sort", "Insertion Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the primary purpose of the A* search algorithm?",
+    "options": ["Pathfinding", "Sorting", "Searching", "Optimization"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of deleting the minimum element from a min-heap?",
+    "options": ["O(log n)", "O(n)", "O(1)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a characteristic of a queue data structure?",
+    "options": ["FIFO (First In, First Out)", "LIFO (Last In, First Out)", "Sorted order", "Allows random access"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of bubble sort in the worst case?",
+    "options": ["O(n^2)", "O(n log n)", "O(n)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is used to implement a priority queue?",
+    "options": ["Heap", "Array", "Linked List", "Stack"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of merge sort?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used to implement the function of undo in software applications?",
+    "options": ["Stack", "Queue", "Tree", "Graph"],
+    "answer": 0
+},
+{
+    "question": "Which of the following sorting algorithms is not a comparison-based algorithm?",
+    "options": ["Counting Sort", "Quick Sort", "Merge Sort", "Heap Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of accessing an element in a hash table (average case)?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used for finding all strongly connected components in a directed graph?",
+    "options": ["Kosaraju's Algorithm", "Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used for implementing a breadth-first search (BFS)?",
+    "options": ["Queue", "Stack", "Heap", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of the best case for insertion sort?",
+    "options": ["O(n)", "O(n log n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of quicksort?",
+    "options": ["O(log n)", "O(n)", "O(1)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms uses a greedy approach for solving optimization problems?",
+    "options": ["Kruskal's Algorithm", "Dijkstra's Algorithm", "Prim's Algorithm", "All of the above"],
+    "answer": 3
+},
+{
+    "question": "Which of the following sorting algorithms has the best average time complexity?",
+    "options": ["Merge Sort", "Quick Sort", "Heap Sort", "Bubble Sort"],
+    "answer": 1
+},
+{
+    "question": "Which of the following data structures is used to implement depth-first search (DFS)?",
+    "options": ["Stack", "Queue", "Array", "Linked List"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is not a characteristic of a binary search tree?",
+    "options": ["Left subtree values are less than the root", "Right subtree values are greater than the root", "In-order traversal produces a sorted list", "The tree can have more than two children per node"],
+    "answer": 3
+},
+      {
+    "question": "Which of the following algorithms is used for finding the shortest path in a weighted graph?",
+    "options": ["Dijkstra's Algorithm", "Prim's Algorithm", "Kruskal's Algorithm", "Bellman-Ford Algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of breadth-first search (BFS)?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the best data structure to implement a priority queue?",
+    "options": ["Heap", "Array", "Stack", "Queue"],
+    "answer": 0
+},
+{
+    "question": "In which scenario would you use a hash table?",
+    "options": ["When you need fast lookups and insertions", "When you need sorted data", "When you need to handle duplicates", "When you need to store large datasets"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is not a sorting algorithm?",
+    "options": ["Merge Sort", "Quick Sort", "Heap Sort", "Depth-First Search"],
+    "answer": 3
+},
+{
+    "question": "What is the time complexity of finding an element in a balanced binary search tree?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "What is the worst-case time complexity of the quicksort algorithm?",
+    "options": ["O(n^2)", "O(n log n)", "O(n)", "O(log n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following data structures is used to implement a LRU (Least Recently Used) cache?",
+    "options": ["Hash Map with Doubly Linked List", "Array", "Queue", "Stack"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of accessing an element in an array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is best suited for finding the minimum spanning tree of a graph?",
+    "options": ["Prim's Algorithm", "Dijkstra's Algorithm", "Kruskal's Algorithm", "Bellman-Ford Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which of the following sorting algorithms has a time complexity of O(n^2) in the worst case?",
+    "options": ["Bubble Sort", "Quick Sort", "Merge Sort", "Heap Sort"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used to implement a recursive function call?",
+    "options": ["Stack", "Queue", "Heap", "Array"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is not an advantage of a hash table?",
+    "options": ["Fast average time complexity for insertions and lookups", "Allows fast searching of data", "Guaranteed ordering of elements", "Can handle large volumes of data efficiently"],
+    "answer": 2
+},
+{
+    "question": "What is the space complexity of a stack used for a depth-first search?",
+    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which sorting algorithm uses a divide and conquer approach?",
+    "options": ["Quick Sort", "Bubble Sort", "Insertion Sort", "Selection Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of insertion sort in the worst case?",
+    "options": ["O(n^2)", "O(n log n)", "O(n)", "O(log n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a characteristic of a queue data structure?",
+    "options": ["FIFO (First In, First Out)", "LIFO (Last In, First Out)", "Sorted order", "Random access"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to solve the knapsack problem?",
+    "options": ["Greedy Algorithm", "Dynamic Programming", "Divide and Conquer", "Backtracking"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is true about a binary heap?",
+    "options": ["It is a complete binary tree", "It has a strict ordering of elements", "It is always sorted", "It has a left-to-right traversal order"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of quicksort?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
+    "answer": 1
+},
+      {
+    "question": "Which of the following data structures is not a linear data structure?",
+    "options": ["Stack", "Queue", "Tree", "Linked List"],
+    "answer": 2
+},
+{
+    "question": "In which scenario would you use a depth-first search (DFS)?",
+    "options": ["To find the shortest path", "When exploring all possible solutions", "When you need to find the minimum spanning tree", "When the graph is weighted"],
+    "answer": 1
+},
+{
+    "question": "What is the time complexity of the heap sort algorithm in the worst case?",
+    "options": ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a stable sorting algorithm?",
+    "options": ["Bubble Sort", "Quick Sort", "Heap Sort", "Selection Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the space complexity of a binary search tree (BST) in the worst case?",
+    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is used for finding the shortest path in an unweighted graph?",
+    "options": ["Dijkstra's Algorithm", "Floyd-Warshall Algorithm", "Bellman-Ford Algorithm", "Breadth-First Search (BFS)"],
+    "answer": 3
+},
+{
+    "question": "Which of the following is not a characteristic of a doubly linked list?",
+    "options": ["Each node points to both the next and previous nodes", "It allows bidirectional traversal", "It can be implemented using arrays", "It requires more memory per node than a singly linked list"],
+    "answer": 2
+},
+{
+    "question": "Which of the following sorting algorithms is not comparison-based?",
+    "options": ["Bubble Sort", "Merge Sort", "Radix Sort", "Quick Sort"],
+    "answer": 2
+},
+{
+    "question": "In a graph, which of the following algorithms is used to find the Minimum Spanning Tree (MST)?",
+    "options": ["Prim's Algorithm", "Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Depth-First Search (DFS)"],
+    "answer": 0
+},
+{
+    "question": "What is the time complexity of accessing an element in a hash table?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is typically used to implement an undo feature in a text editor?",
+    "options": ["Stack", "Queue", "Linked List", "Array"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the correct time complexity for searching in a balanced binary search tree (BST)?",
+    "options": ["O(log n)", "O(n)", "O(n^2)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true for a queue implemented using a linked list?",
+    "options": ["It follows the FIFO order", "It follows the LIFO order", "It allows random access", "It is implemented using a hash table"],
+    "answer": 0
+},
+{
+    "question": "Which of the following sorting algorithms is the most efficient for large datasets?",
+    "options": ["Merge Sort", "Bubble Sort", "Selection Sort", "Insertion Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the worst-case time complexity of quicksort?",
+    "options": ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"],
+    "answer": 1
+},
+{
+    "question": "Which algorithm is primarily used to solve the traveling salesman problem?",
+    "options": ["Dynamic Programming", "Greedy Algorithm", "Backtracking", "Divide and Conquer"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is a key feature of a binary search tree (BST)?",
+    "options": ["Each node has at most two children", "Each node stores a reference to its parent", "The left subtree contains only nodes with values greater than the parent", "The right subtree contains only nodes with values less than the parent"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is used to find all strongly connected components in a directed graph?",
+    "options": ["Kosaraju's Algorithm", "Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is the best time complexity for searching in a sorted array using binary search?",
+    "options": ["O(log n)", "O(n)", "O(n^2)", "O(1)"],
+    "answer": 0
+},
+      {
+    "question": "Which of the following data structures can be used to implement a priority queue?",
+    "options": ["Binary Heap", "Linked List", "Stack", "Queue"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is not a property of a stack?",
+    "options": ["Last In First Out (LIFO)", "Supports random access", "Used in function call management", "Push and pop operations"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is a limitation of a singly linked list?",
+    "options": ["Cannot be traversed backward", "Requires more memory than an array", "Cannot store multiple data types", "Does not allow dynamic resizing"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is known for its divide and conquer approach to sorting?",
+    "options": ["Quick Sort", "Bubble Sort", "Selection Sort", "Merge Sort"],
+    "answer": 0
+},
+{
+    "question": "What is the best time complexity for insertion in an AVL tree?",
+    "options": ["O(log n)", "O(n)", "O(n^2)", "O(1)"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a greedy algorithm?",
+    "options": ["Dijkstra's Algorithm", "Prim's Algorithm", "Breadth-First Search", "Kruskal's Algorithm"],
+    "answer": 1
+},
+{
+    "question": "Which algorithm is commonly used to find the shortest path between two nodes in a graph?",
+    "options": ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which data structure does a hash table use to store elements?",
+    "options": ["Arrays", "Linked Lists", "Trees", "Queues"],
+    "answer": 0
+},
+{
+    "question": "Which algorithm is best suited for finding the maximum flow in a network?",
+    "options": ["Ford-Fulkerson Algorithm", "Dijkstra's Algorithm", "Kruskal's Algorithm", "Bellman-Ford Algorithm"],
+    "answer": 0
+},
+{
+    "question": "Which sorting algorithm uses a divide-and-conquer strategy but does not require additional memory space?",
+    "options": ["Quick Sort", "Merge Sort", "Bubble Sort", "Insertion Sort"],
+    "answer": 0
+},
+{
+    "question": "Which data structure is used for implementing depth-first search?",
+    "options": ["Queue", "Stack", "Linked List", "Heap"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is not a characteristic of a priority queue?",
+    "options": ["Elements are dequeued in priority order", "It supports both insertion and deletion operations", "It operates on a first-come, first-served basis", "It is implemented using a heap or a sorted list"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is an application of dynamic programming?",
+    "options": ["Shortest Path Problem", "Knapsack Problem", "Sorting a list of integers", "Minimum Spanning Tree"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is true for a circular queue?",
+    "options": ["It has a fixed size", "It is a dynamic structure", "It uses a stack for implementation", "It allows random access to elements"],
+    "answer": 0
+},
+{
+    "question": "In which of the following algorithms is a binary search tree used?",
+    "options": ["Quick Sort", "Heap Sort", "AVL Tree Insertion", "Merge Sort"],
+    "answer": 2
+},
+{
+    "question": "What is the time complexity of accessing an element in a doubly linked list?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": 2
+},
+{
+    "question": "Which of the following is not an advantage of using a linked list?",
+    "options": ["Dynamic size", "Efficient insertion and deletion", "Direct access to elements", "Can grow and shrink in size easily"],
+    "answer": 2
+},
+{
+    "question": "Which of the following algorithms is used for sorting by dividing the data into sublists?",
+    "options": ["Quick Sort", "Selection Sort", "Merge Sort", "Heap Sort"],
+    "answer": 2
+},
+{
+    "question": "Which data structure is best suited for implementing recursion?",
+    "options": ["Queue", "Stack", "Hash Table", "Linked List"],
+    "answer": 1
+},
+{
+    "question": "Which of the following is not a key property of a heap?",
+    "options": ["Binary tree", "Complete tree", "Root node is the minimum", "Max-heap or Min-heap property"],
+    "answer": 2
+}
+  ],
+              "operating-systems": [
+    {
+      "question": "Which scheduling algorithm selects the process with the shortest estimated processing time?",
+      "options": ["First-Come, First-Served", "Round Robin", "Priority Scheduling", "Shortest Job First"],
+      "answer": 3
+    },
+    {
+      "question": "What is a deadlock in operating systems?",
+      "options": ["When a process terminates unexpectedly", "When two or more processes wait indefinitely for resources held by each other", "When CPU utilization reaches 100%", "When memory becomes fragmented"],
+      "answer": 1
+    },
+    {
+      "question": "Which page replacement algorithm replaces the page that will not be used for the longest period of time in the future?",
+      "options": ["FIFO", "LRU", "Optimal", "Random"],
+      "answer": 2
+    },
+    {
+      "question": "What is the primary purpose of a semaphore in operating systems?",
+      "options": ["Memory management", "File organization", "Process synchronization", "CPU scheduling"],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is NOT a function of an operating system?",
+      "options": ["Memory management", "Process management", "Device drivers", "Database management"],
+      "answer": 3
+    },
+      {
+    "question": "Which of the following is an example of a multitasking operating system?",
+    "options": ["Windows", "DOS", "Unix", "Mac OS 9"],
+    "answer": 0
+},
+{
+    "question": "What is the main function of an operating system?",
+    "options": ["Managing hardware and software resources", "Creating graphical user interfaces", "Writing application programs", "Managing network traffic"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operating systems is open source?",
+    "options": ["Linux", "Windows", "macOS", "iOS"],
+    "answer": 0
+},
+{
+    "question": "What is a kernel in an operating system?",
+    "options": ["The core part of the OS that manages system resources", "The part responsible for user interface", "A software component for file management", "A hardware device driver"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is NOT a type of operating system?",
+    "options": ["Distributed OS", "Real-time OS", "Network OS", "Hardware OS"],
+    "answer": 3
+},
+{
+    "question": "In which of the following scenarios would a real-time operating system be used?",
+    "options": ["In embedded systems controlling medical devices", "On a desktop computer", "For running web servers", "In cloud computing environments"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a command-line interface operating system?",
+    "options": ["Linux", "Windows 10", "macOS", "Android"],
+    "answer": 0
+},
+{
+    "question": "What does the term 'virtual memory' refer to in an operating system?",
+    "options": ["Memory that simulates additional RAM using hard drive space", "The physical RAM installed in a computer", "The storage space used by the operating system", "A virtual desktop environment in the OS"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is used by the operating system to manage processes and memory?",
+    "options": ["Process scheduler", "File manager", "Network interface", "Security manager"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a characteristic of a single-user operating system?",
+    "options": ["Only one user can use the system at a time", "It supports multiple users simultaneously", "It manages resources for different machines", "It is used for running large-scale servers"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a function of the file system in an operating system?",
+    "options": ["Organizing and storing files on storage devices", "Providing network connectivity", "Managing CPU resources", "Managing hardware devices"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the primary purpose of a device driver in an operating system?",
+    "options": ["To provide an interface between the OS and hardware devices", "To manage files on storage devices", "To monitor system performance", "To manage user access to the system"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operating systems is used primarily for mobile devices?",
+    "options": ["Android", "Windows", "Linux", "macOS"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a key feature of a distributed operating system?",
+    "options": ["It manages a collection of independent computers as if they were a single system", "It is designed to work with one device at a time", "It runs only on mainframes", "It uses a graphical user interface"],
+    "answer": 0
+},
+{
+    "question": "Which type of operating system is used in embedded systems such as digital cameras and medical devices?",
+    "options": ["Real-time operating system", "Network operating system", "Multi-user operating system", "Distributed operating system"],
+    "answer": 0
+},
+{
+    "question": "What is the primary role of the shell in an operating system?",
+    "options": ["To interpret and execute user commands", "To manage system hardware", "To organize files on storage devices", "To control network traffic"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a major disadvantage of a multi-tasking operating system?",
+    "options": ["Increased complexity in managing processes", "Lack of compatibility with older software", "Slower processing speed", "High memory requirements"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a common task performed by the operating system's process scheduler?",
+    "options": ["Allocating CPU time to processes", "Managing file permissions", "Routing network traffic", "Creating backups of system data"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a feature of a modern operating system that allows it to interact with multiple hardware devices?",
+    "options": ["Device management", "Real-time processing", "Application isolation", "Task synchronization"],
+    "answer": 0
+},
+      {
+    "question": "What does an operating system's kernel do in relation to hardware?",
+    "options": ["It acts as an intermediary between hardware and software", "It encrypts data", "It creates network protocols", "It manages file permissions"],
+    "answer": 0
+},
+{
+    "question": "What type of operating system is primarily designed for personal computers?",
+    "options": ["Desktop operating system", "Real-time operating system", "Distributed operating system", "Embedded operating system"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a primary characteristic of a batch operating system?",
+    "options": ["It processes jobs without user interaction", "It allows multiple users to interact with the system simultaneously", "It is used for real-time applications", "It supports graphical interfaces"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a multi-user operating system?",
+    "options": ["Unix", "macOS", "Windows XP", "Android"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of virtual memory in an operating system?",
+    "options": ["It allows the system to use hard disk space as if it were RAM", "It improves the system's graphical interface", "It helps in managing multiple users", "It provides network security features"],
+    "answer": 0
+},
+{
+    "question": "Which operating system is primarily used on Apple computers?",
+    "options": ["macOS", "Linux", "Windows", "Ubuntu"],
+    "answer": 0
+},
+{
+    "question": "What is a common use of a real-time operating system?",
+    "options": ["Controlling embedded devices like industrial robots", "Managing file systems in desktops", "Providing network services", "Handling multimedia applications"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operating systems is open-source and known for its use in servers and desktops?",
+    "options": ["Linux", "Windows", "macOS", "Android"],
+    "answer": 0
+},
+{
+    "question": "Which function does the operating system's file system perform?",
+    "options": ["Organizing and managing files on storage devices", "Managing CPU scheduling", "Providing a user interface", "Managing network connections"],
+    "answer": 0
+},
+{
+    "question": "What is the main purpose of the process management component in an operating system?",
+    "options": ["To control and allocate resources to running processes", "To handle file operations", "To manage network traffic", "To provide graphical user interfaces"],
+    "answer": 0
+},
+{
+    "question": "What type of operating system is designed to run on mobile devices like smartphones?",
+    "options": ["Mobile operating system", "Network operating system", "Mainframe operating system", "Desktop operating system"],
+    "answer": 0
+},
+{
+    "question": "What is the difference between multitasking and multi-threading in an operating system?",
+    "options": ["Multitasking refers to running multiple processes, while multi-threading refers to running multiple threads within a single process", "Multitasking is the ability to execute one process at a time, while multi-threading allows for multiple processes", "Multitasking manages user interfaces, while multi-threading handles file systems", "There is no difference between the two"],
+    "answer": 0
+},
+{
+    "question": "What is the role of the operating system's scheduler?",
+    "options": ["To allocate CPU time to processes", "To allocate disk space for files", "To handle user input and output", "To manage network traffic"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is NOT a responsibility of an operating system?",
+    "options": ["Running application software", "Managing system resources", "Providing security for the system", "Creating computer hardware"],
+    "answer": 3
+},
+{
+    "question": "What is the primary function of the operating system's memory management unit?",
+    "options": ["To manage the system's RAM and swap files", "To manage hardware device drivers", "To handle network connections", "To provide a user interface"],
+    "answer": 0
+},
+{
+    "question": "Which of the following features is common in modern operating systems?",
+    "options": ["Graphical user interface", "Command-line interface", "Lack of memory management", "Single-user access"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a benefit of using a multi-threading operating system?",
+    "options": ["It allows multiple threads within a single process to execute concurrently", "It reduces the need for multitasking", "It limits the number of processes that can run", "It requires more system resources"],
+    "answer": 0
+},
+{
+    "question": "What does the term 'booting' refer to in an operating system?",
+    "options": ["The process of loading the operating system into memory", "The process of shutting down the system", "The process of starting network services", "The process of installing software"],
+    "answer": 0
+},
+{
+    "question": "Which operating system is known for being lightweight and used in embedded systems?",
+    "options": ["RTOS (Real-Time Operating System)", "Windows", "macOS", "Linux"],
+    "answer": 0
+},
+      {
+    "question": "Which of the following is a key feature of an embedded operating system?",
+    "options": ["Small footprint and efficiency", "Support for multi-user environments", "Complex graphical user interface", "Support for large-scale databases"],
+    "answer": 0
+},
+{
+    "question": "What is a 'deadlock' in an operating system?",
+    "options": ["A situation where two or more processes cannot proceed because they are each waiting for the other to release resources", "A method of managing files in memory", "The failure of a hardware component", "A system crash caused by excessive processes"],
+    "answer": 0
+},
+{
+    "question": "Which of the following tasks is typically performed by an operating system's I/O management component?",
+    "options": ["Coordinating input and output operations between devices and software", "Allocating memory to processes", "Managing network traffic", "Scheduling processes to run on the CPU"],
+    "answer": 0
+},
+{
+    "question": "What is the main purpose of a virtual machine in the context of operating systems?",
+    "options": ["To run multiple operating systems on the same physical hardware", "To handle user input and output", "To manage system resources", "To manage file system access"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a type of software used to create virtual environments for running multiple operating systems?",
+    "options": ["Hypervisor", "Browser", "Compiler", "Text editor"],
+    "answer": 0
+},
+{
+    "question": "Which system resource is managed by the operating system's process scheduler?",
+    "options": ["CPU time", "Disk space", "Network bandwidth", "Graphics processing unit (GPU) time"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of a file system in an operating system?",
+    "options": ["To organize and store files on storage devices", "To manage network traffic", "To allocate CPU time", "To create graphical user interfaces"],
+    "answer": 0
+},
+{
+    "question": "Which operating system was the first to implement a graphical user interface (GUI)?",
+    "options": ["Xerox Alto", "Windows XP", "macOS", "Linux"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a server operating system?",
+    "options": ["Linux Server", "Windows 10", "macOS", "Android"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is NOT a function of an operating system's kernel?",
+    "options": ["Managing hardware interactions", "Handling user input", "Providing network services", "Allocating resources to processes"],
+    "answer": 1
+},
+{
+    "question": "What is the role of the operating system's task scheduler?",
+    "options": ["It manages the execution order of processes", "It handles user input and output", "It manages network connections", "It manages file permissions"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a real-time operating system?",
+    "options": ["RTOS", "Windows Server", "macOS", "Android"],
+    "answer": 0
+},
+{
+    "question": "What is the function of the 'swapping' mechanism in operating systems?",
+    "options": ["To move processes between RAM and disk when there is not enough memory", "To improve the graphical performance of the system", "To manage user input", "To manage network traffic"],
+    "answer": 0
+},
+{
+    "question": "Which type of operating system is best suited for managing large, distributed networks?",
+    "options": ["Network operating system", "Desktop operating system", "Embedded operating system", "Real-time operating system"],
+    "answer": 0
+},
+{
+    "question": "What is a key difference between a monolithic kernel and a microkernel?",
+    "options": ["A monolithic kernel provides more services in one large kernel, while a microkernel provides a minimal set of services with modular components", "A monolithic kernel is easier to debug", "A microkernel is faster than a monolithic kernel", "A monolithic kernel uses less memory"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a key feature of a distributed operating system?",
+    "options": ["It allows multiple computers to work together as a single system", "It is designed to run on mobile devices", "It only supports single-user access", "It is used primarily for file management"],
+    "answer": 0
+},
+{
+    "question": "What is the term for the process of managing multiple processes in an operating system to appear as if they are running simultaneously?",
+    "options": ["Multitasking", "Interrupt handling", "Memory paging", "Process synchronization"],
+    "answer": 0
+},
+{
+    "question": "What is the primary goal of the operating system's security functions?",
+    "options": ["To protect the system and user data from unauthorized access", "To manage CPU scheduling", "To allocate memory to processes", "To handle input/output operations"],
+    "answer": 0
+},
+      {
+    "question": "Which of the following best describes an interrupt in an operating system?",
+    "options": ["A signal to the CPU to stop its current process and start a new one", "A software function that runs periodically", "A type of user input", "A task performed by the operating system"],
+    "answer": 0
+},
+{
+    "question": "Which part of the operating system is responsible for managing system resources such as CPU, memory, and devices?",
+    "options": ["Kernel", "User interface", "File system", "Process scheduler"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is NOT a typical role of the operating system's memory management unit?",
+    "options": ["Managing virtual memory", "Allocating and deallocating memory blocks", "Handling input and output", "Ensuring memory protection between processes"],
+    "answer": 2
+},
+{
+    "question": "What is the primary difference between a 32-bit and a 64-bit operating system?",
+    "options": ["A 64-bit operating system can process more data at once and can address more memory", "A 32-bit operating system supports better security", "A 64-bit operating system is slower than a 32-bit operating system", "A 32-bit operating system supports more applications"],
+    "answer": 0
+},
+{
+    "question": "What is a 'system call' in an operating system?",
+    "options": ["A mechanism for a program to request services from the operating system", "A function to handle input and output", "A way to schedule tasks", "A type of user interface"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is the main function of the operating system's process management system?",
+    "options": ["To handle the execution and coordination of processes", "To manage system files", "To handle user inputs", "To configure network connections"],
+    "answer": 0
+},
+{
+    "question": "What is a key characteristic of a multi-tasking operating system?",
+    "options": ["It can execute multiple tasks or processes concurrently", "It can only execute one task at a time", "It requires only a single processor", "It runs on embedded systems"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an advantage of a distributed operating system?",
+    "options": ["It can manage a network of computers as a single system", "It is easier to install and configure", "It is more secure than centralized systems", "It requires less network bandwidth"],
+    "answer": 0
+},
+{
+    "question": "Which type of operating system is typically used in embedded devices?",
+    "options": ["Embedded operating system", "Desktop operating system", "Real-time operating system", "Server operating system"],
+    "answer": 0
+},
+{
+    "question": "What does the 'fork' system call do in a Unix-like operating system?",
+    "options": ["It creates a new process by duplicating the calling process", "It terminates a process", "It creates a new thread", "It schedules a process to run later"],
+    "answer": 0
+},
+{
+    "question": "What is the role of the 'page table' in virtual memory management?",
+    "options": ["To map virtual memory addresses to physical memory addresses", "To store user data", "To allocate resources for processes", "To manage file system storage"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a common technique for achieving process synchronization in an operating system?",
+    "options": ["Semaphores", "Network protocols", "Memory swapping", "Multithreading"],
+    "answer": 0
+},
+{
+    "question": "What is the primary function of a bootloader in an operating system?",
+    "options": ["To load the operating system into memory during the system startup", "To manage user login credentials", "To maintain system security", "To execute system processes"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of an open-source operating system?",
+    "options": ["Linux", "Windows 10", "macOS", "Android"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of 'paging' in memory management?",
+    "options": ["To divide physical memory into fixed-size pages and allow non-contiguous memory allocation", "To swap data between RAM and hard drive", "To increase the amount of available memory", "To execute processes in parallel"],
+    "answer": 0
+},
+{
+    "question": "What is the role of the 'file system' in an operating system?",
+    "options": ["To organize and store files on disk drives", "To manage CPU scheduling", "To maintain network communication", "To create graphical user interfaces"],
+    "answer": 0
+},
+{
+    "question": "What is a 'process' in an operating system?",
+    "options": ["An instance of a program that is being executed", "A user input task", "A type of system call", "A method of memory management"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a characteristic of a real-time operating system?",
+    "options": ["It guarantees that certain tasks will be completed within a specified time frame", "It is designed to run on personal computers", "It is only used for managing file systems", "It is primarily for desktop use"],
+    "answer": 0
+},
+{
+    "question": "What is 'thrashing' in the context of memory management?",
+    "options": ["Excessive paging that slows down system performance", "Excessive CPU usage", "A process hanging due to a deadlock", "A system crash caused by resource depletion"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a primary task of the operating system's device drivers?",
+    "options": ["To provide communication between the operating system and hardware devices", "To manage CPU scheduling", "To handle process synchronization", "To manage file system access"],
+    "answer": 0
+},
+      {
+    "question": "Which type of operating system is typically used for managing large-scale databases?",
+    "options": ["Server operating system", "Embedded operating system", "Real-time operating system", "Mobile operating system"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of a 'shell' in an operating system?",
+    "options": ["To provide a command-line interface for user interaction", "To manage memory allocation", "To control hardware devices", "To schedule processes"],
+    "answer": 0
+},
+{
+    "question": "What is the function of 'context switching' in a multi-tasking operating system?",
+    "options": ["Switching between different processes in the CPU", "Changing the system clock", "Transferring data from disk to memory", "Swapping files between different storage devices"],
+    "answer": 0
+},
+{
+    "question": "Which of the following best defines 'deadlock' in an operating system?",
+    "options": ["A situation where two or more processes are waiting for each other to release resources, causing a cycle", "A state where the system crashes due to a memory overload", "A technique for speeding up task execution", "A process that continuously consumes CPU time without giving up"],
+    "answer": 0
+},
+{
+    "question": "What is the function of 'multitasking' in an operating system?",
+    "options": ["Running multiple applications or processes simultaneously", "Handling input and output operations", "Allocating system memory to processes", "Providing security features for the system"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a batch processing operating system?",
+    "options": ["IBM z/OS", "Windows 10", "Android", "iOS"],
+    "answer": 0
+},
+{
+    "question": "What is a 'device driver' in an operating system?",
+    "options": ["A software component that allows the operating system to communicate with hardware devices", "A program for managing memory allocation", "A tool for scheduling tasks", "A service for managing files and directories"],
+    "answer": 0
+},
+{
+    "question": "What is the main purpose of an operating system's kernel?",
+    "options": ["To provide a communication interface between hardware and software", "To manage user inputs and graphical interfaces", "To perform system-level tasks such as file management", "To control the execution of applications"],
+    "answer": 0
+},
+{
+    "question": "What does the term 'virtual memory' refer to in an operating system?",
+    "options": ["A technique that uses disk space to simulate additional RAM", "Memory that can be accessed by virtual machines", "Memory used by system processes only", "A memory management technique to prevent fragmentation"],
+    "answer": 0
+},
+{
+    "question": "Which operating system component is responsible for managing communication between processes?",
+    "options": ["Inter-process communication (IPC)", "File system", "Virtual memory", "Device drivers"],
+    "answer": 0
+},
+{
+    "question": "Which scheduling algorithm is often used in real-time operating systems?",
+    "options": ["Rate-monotonic scheduling", "First-come, first-served", "Round-robin scheduling", "Shortest job next"],
+    "answer": 0
+},
+{
+    "question": "What is the main difference between a 'monolithic' kernel and a 'microkernel'?",
+    "options": ["A monolithic kernel contains all system services in one large block, while a microkernel has separate modules for different services", "A microkernel is used in mobile operating systems", "A monolithic kernel is slower but more secure", "A microkernel can run on only one processor at a time"],
+    "answer": 0
+},
+{
+    "question": "What is 'swapping' in an operating system?",
+    "options": ["Moving data between physical memory and disk storage to optimize memory usage", "Transferring files between users", "Swapping tasks between processes", "Sharing CPU resources between processes"],
+    "answer": 0
+},
+{
+    "question": "Which type of operating system is designed to handle real-time tasks and processes?",
+    "options": ["Real-time operating system", "Batch operating system", "Single-user operating system", "Multi-user operating system"],
+    "answer": 0
+},
+{
+    "question": "What is 'file system fragmentation'?",
+    "options": ["When files are stored in non-contiguous sectors on disk, reducing access speed", "When files are compressed to save space", "When the file system becomes corrupted", "When files are deleted from the system"],
+    "answer": 0
+},
+{
+    "question": "Which of the following best describes a 'time-sharing' operating system?",
+    "options": ["An OS that allows multiple users to interact with the system at the same time", "An OS that provides real-time control over hardware", "An OS used exclusively in mobile devices", "An OS optimized for single-user tasks"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is NOT a function of an operating system's security system?",
+    "options": ["Encrypting files", "Managing user access permissions", "Monitoring hardware usage", "Implementing firewalls and antivirus software"],
+    "answer": 2
+},
+{
+    "question": "What is 'file system mounting'?",
+    "options": ["The process of making a file system accessible to the operating system", "The process of backing up files", "The process of optimizing storage space", "The process of compressing files to save space"],
+    "answer": 0
+},
+{
+    "question": "What is 'user space' in an operating system?",
+    "options": ["The area of memory where user applications run, separate from system-level tasks", "The part of the disk used for storing user files", "The section of memory used by the kernel", "The space reserved for hardware interactions"],
+    "answer": 0
+},
+      {
+    "question": "Which of the following is a common feature of a distributed operating system?",
+    "options": ["Resource sharing across multiple computers", "Single-user access to all system resources", "Direct access to hardware devices", "Limited memory management"],
+    "answer": 0
+},
+{
+    "question": "What is the function of 'semaphore' in an operating system?",
+    "options": ["A signaling mechanism used for process synchronization", "A tool for managing virtual memory", "A technique for managing CPU scheduling", "A method for handling user input"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a network operating system?",
+    "options": ["Linux", "Windows 10", "MacOS", "Novell NetWare"],
+    "answer": 3
+},
+{
+    "question": "Which of the following scheduling algorithms is most commonly used in general-purpose operating systems?",
+    "options": ["First-come, first-served", "Round-robin", "Shortest job first", "Rate-monotonic scheduling"],
+    "answer": 1
+},
+{
+    "question": "What does 'multithreading' refer to in an operating system?",
+    "options": ["Executing multiple threads within a single process", "Running multiple processes simultaneously", "Allocating multiple CPUs to a process", "Synchronizing different processes"],
+    "answer": 0
+},
+{
+    "question": "What is the primary role of the 'file system' in an operating system?",
+    "options": ["To manage file storage and access", "To schedule system processes", "To manage memory allocation", "To handle network communication"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a characteristic of an embedded operating system?",
+    "options": ["Designed for specific hardware applications", "Multi-user and multi-tasking support", "Handles a wide range of devices", "General-purpose software system"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of a 'system call' in an operating system?",
+    "options": ["A mechanism that allows user applications to request services from the kernel", "A way to handle hardware interrupts", "A method for managing user inputs", "A tool for monitoring network traffic"],
+    "answer": 0
+},
+{
+    "question": "Which type of operating system is typically used in mobile devices?",
+    "options": ["Android", "Windows Server", "Unix", "Mainframe OS"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is true about 'virtualization' in an operating system?",
+    "options": ["It allows multiple virtual machines to run on a single physical machine", "It enhances hardware performance directly", "It only applies to mobile operating systems", "It reduces the need for system security measures"],
+    "answer": 0
+},
+{
+    "question": "What is 'RAID' in the context of an operating system?",
+    "options": ["A data storage virtualization technology", "A process management technique", "A file compression method", "A disk fragmentation tool"],
+    "answer": 0
+},
+{
+    "question": "Which of the following best describes 'kernel mode' in an operating system?",
+    "options": ["A privileged mode where the operating system can access hardware and critical resources", "A mode where user applications run with limited access to system resources", "A mode that only supports non-interactive processes", "A mode used exclusively for debugging the system"],
+    "answer": 0
+},
+{
+    "question": "What is 'swapping' in an operating system?",
+    "options": ["Moving processes between main memory and secondary storage", "Changing the order of executing processes", "Optimizing CPU performance", "Transferring data between different memory units"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operating systems is considered open-source?",
+    "options": ["Linux", "Windows 10", "macOS", "iOS"],
+    "answer": 0
+},
+{
+    "question": "What is 'spooling' in an operating system?",
+    "options": ["Temporarily storing data for later processing", "Managing memory allocation for running processes", "Sharing resources between multiple users", "Running processes in parallel to maximize performance"],
+    "answer": 0
+},
+{
+    "question": "Which operating system feature is responsible for controlling how processes access memory?",
+    "options": ["Memory management unit", "File system", "Device drivers", "Process scheduler"],
+    "answer": 0
+},
+{
+    "question": "What is 'load balancing' in the context of operating systems?",
+    "options": ["Distributing tasks evenly across multiple resources to optimize performance", "Managing the number of processes running simultaneously", "Allocating more memory to active processes", "Managing disk space allocation"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an advantage of using a microkernel-based operating system?",
+    "options": ["Increased modularity and stability", "Faster process execution", "Easier to develop for hardware-specific devices", "Better support for multi-tasking"],
+    "answer": 0
+},
+{
+    "question": "What is the role of a 'system daemon' in an operating system?",
+    "options": ["A background process that runs without direct user interaction", "A system process responsible for managing user permissions", "A type of virus protection software", "A program for scheduling tasks"],
+    "answer": 0
+},
+{
+    "question": "What is the function of 'memory paging' in an operating system?",
+    "options": ["Dividing memory into fixed-size blocks to optimize space utilization", "Allocating memory to active processes in blocks", "Swapping data between memory and disk storage", "Mapping virtual memory addresses to physical memory"],
+    "answer": 0
+},
+      {
+    "question": "Which of the following is a characteristic of a distributed operating system?",
+    "options": ["It allows multiple independent computers to act as one", "It operates on a single physical machine", "It does not require network connectivity", "It relies solely on a single-core processor"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of a 'deadlock' in an operating system?",
+    "options": ["A situation where two or more processes are unable to proceed due to resource contention", "A method for managing memory overflow", "A way to prioritize system processes", "A technique to balance load across servers"],
+    "answer": 0
+},
+{
+    "question": "Which scheduling algorithm is designed to minimize waiting time in an operating system?",
+    "options": ["Shortest Job First (SJF)", "First-Come, First-Served (FCFS)", "Round Robin", "Priority Scheduling"],
+    "answer": 0
+},
+{
+    "question": "What is the function of 'context switching' in an operating system?",
+    "options": ["Saving and restoring the state of a process when switching between processes", "Allocating resources to processes", "Initiating the start of a new process", "Managing memory for multiple applications"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of 'virtual memory' in an operating system?",
+    "options": ["Allowing a computer to use more memory than physically available by using disk space", "Creating a duplicate copy of physical memory", "Increasing CPU performance by managing cache memory", "Allocating physical memory to the most active processes"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a real-time operating system?",
+    "options": ["RTOS", "Linux", "Windows Server", "MacOS"],
+    "answer": 0
+},
+{
+    "question": "What does the 'file allocation table' (FAT) do in an operating system?",
+    "options": ["Keeps track of the location of files on the disk", "Manages the access rights to files", "Stores the history of file modifications", "Checks for errors in system files"],
+    "answer": 0
+},
+{
+    "question": "What does the term 'multitasking' refer to in an operating system?",
+    "options": ["Running multiple processes simultaneously on a CPU", "Dividing a single process into smaller tasks", "Switching between multiple operating systems", "Allowing a system to execute a single process faster"],
+    "answer": 0
+},
+{
+    "question": "What is 'paging' in memory management?",
+    "options": ["Dividing memory into fixed-size blocks", "Dividing memory into variable-sized blocks", "Storing memory data in a secondary storage device", "Assigning priorities to processes for memory allocation"],
+    "answer": 0
+},
+{
+    "question": "Which component of an operating system is responsible for managing hardware resources?",
+    "options": ["Kernel", "File System", "Device Drivers", "User Interface"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a command-line interface (CLI) operating system?",
+    "options": ["Linux", "Windows XP", "macOS", "Android"],
+    "answer": 0
+},
+{
+    "question": "What does 'loadable kernel modules' allow in an operating system?",
+    "options": ["Dynamically loading and unloading parts of the kernel as needed", "Allocating hardware resources to the kernel", "Storing kernel configurations", "Encrypting files during execution"],
+    "answer": 0
+},
+{
+    "question": "Which scheduling algorithm ensures each process receives a fair share of CPU time?",
+    "options": ["Round Robin", "First-Come, First-Served", "Shortest Job First", "Priority Scheduling"],
+    "answer": 0
+},
+{
+    "question": "What does 'kernel space' refer to in an operating system?",
+    "options": ["Memory reserved for the operating system kernel and low-level system operations", "Space used by user-level applications", "Memory used for file storage", "Cache memory used to store frequently accessed data"],
+    "answer": 0
+},
+{
+    "question": "What is the main advantage of a microkernel-based operating system?",
+    "options": ["Increased stability and modularity", "Better support for running multiple applications", "Faster access to hardware resources", "Larger memory support"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a hybrid operating system?",
+    "options": ["Windows NT", "Linux", "MacOS", "Android"],
+    "answer": 0
+},
+{
+    "question": "What is 'CPU scheduling' in an operating system?",
+    "options": ["Managing the allocation of CPU time to different processes", "Allocating memory to running processes", "Prioritizing network traffic", "Handling disk I/O operations"],
+    "answer": 0
+},
+{
+    "question": "What is the function of a 'shell' in an operating system?",
+    "options": ["Providing an interface for users to interact with the operating system", "Managing file systems", "Handling network communications", "Allocating memory to processes"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an essential function of the 'file system' in an operating system?",
+    "options": ["Organizing and storing files on storage devices", "Handling CPU scheduling", "Managing memory allocation", "Ensuring real-time task execution"],
+    "answer": 0
+},
+      {
+    "question": "What is the primary purpose of a 'device driver' in an operating system?",
+    "options": ["To enable communication between the operating system and hardware devices", "To manage file access permissions", "To manage memory allocation for processes", "To schedule CPU time for processes"],
+    "answer": 0
+},
+{
+    "question": "What is 'multithreading' in an operating system?",
+    "options": ["The ability to run multiple threads of a single process concurrently", "The ability to run multiple processes concurrently", "A method for managing large files", "A technique to enhance memory management"],
+    "answer": 0
+},
+{
+    "question": "What does 'file locking' prevent in an operating system?",
+    "options": ["Simultaneous access to a file by multiple processes", "File corruption due to power failure", "The deletion of important files", "File fragmentation"],
+    "answer": 0
+},
+{
+    "question": "What is a 'system call' in an operating system?",
+    "options": ["A request made by a user program for a service provided by the kernel", "A function to manage memory allocation", "A method for inter-process communication", "A way to handle hardware interrupts"],
+    "answer": 0
+},
+{
+    "question": "Which of the following operating system components is responsible for managing processes?",
+    "options": ["Process Scheduler", "File System", "I/O Manager", "Kernel"],
+    "answer": 0
+},
+{
+    "question": "What does 'virtualization' enable in an operating system?",
+    "options": ["Running multiple virtual machines on a single physical machine", "Creating virtual memory space", "Optimizing CPU performance", "Managing file systems in a more efficient way"],
+    "answer": 0
+},
+{
+    "question": "Which of the following algorithms is commonly used in 'disk scheduling'?",
+    "options": ["Shortest Seek Time First (SSTF)", "Round Robin", "First-Come, First-Served", "Priority Scheduling"],
+    "answer": 0
+},
+{
+    "question": "Which system architecture is typically associated with a monolithic kernel?",
+    "options": ["Linux", "Windows", "macOS", "Android"],
+    "answer": 0
+},
+{
+    "question": "Which scheduling policy is used to allocate CPU time in a round-robin fashion?",
+    "options": ["Round Robin", "Shortest Job First", "Priority Scheduling", "First-Come, First-Served"],
+    "answer": 0
+},
+{
+    "question": "What does 'swapping' refer to in memory management?",
+    "options": ["Moving data between main memory and secondary storage", "Switching between different user accounts", "Swapping processes between different CPU cores", "Allocating memory to system processes"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of the 'bootloader' in an operating system?",
+    "options": ["It initializes the operating system and loads the kernel into memory", "It manages network connections", "It schedules processes for execution", "It manages file access permissions"],
+    "answer": 0
+},
+{
+    "question": "What is 'thread synchronization' used for in operating systems?",
+    "options": ["Ensuring that multiple threads do not access shared resources concurrently", "Managing CPU time for each thread", "Running threads independently of each other", "Allocating memory for threads"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a distributed operating system?",
+    "options": ["Google File System", "Windows NT", "Linux", "macOS"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of the 'inode' in a Unix-like file system?",
+    "options": ["To store metadata about files", "To store file data", "To manage file access permissions", "To encrypt file contents"],
+    "answer": 0
+},
+{
+    "question": "What is 'memory fragmentation'?",
+    "options": ["A situation where memory is inefficiently used due to small unused gaps between allocated blocks", "The process of allocating memory to processes", "When memory is cleared after a process terminates", "A method to optimize disk storage"],
+    "answer": 0
+},
+{
+    "question": "What is the role of 'inter-process communication' (IPC) in an operating system?",
+    "options": ["Facilitating data exchange between processes", "Managing memory allocation", "Handling input/output devices", "Scheduling tasks in a queue"],
+    "answer": 0
+},
+{
+    "question": "What is a 'kernel panic' in an operating system?",
+    "options": ["A system error that causes the OS to crash or stop functioning", "A process that cannot allocate enough memory", "A conflict between two processes", "A failure in the disk scheduling algorithm"],
+    "answer": 0
+},
+{
+    "question": "What is 'file system fragmentation'?",
+    "options": ["When files are stored in non-contiguous blocks, causing slower access", "When the file system is full and cannot accept new files", "A method of organizing files to optimize speed", "A process for compressing files on disk"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a key responsibility of the 'resource manager' in an operating system?",
+    "options": ["Allocating and deallocating system resources such as CPU and memory", "Managing user permissions", "Handling network traffic", "Performing system backups"],
+    "answer": 0
+},
+      {
+    "question": "What does 'deadlock' mean in an operating system?",
+    "options": ["A situation where two or more processes are unable to proceed because each is waiting for the other to release resources", "A process that cannot allocate enough memory", "The process of recovering from a system crash", "A technique to manage file permissions"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a feature of a 'real-time operating system'?",
+    "options": ["It guarantees a specific response time for critical tasks", "It supports multitasking in a non-preemptive way", "It focuses on maximizing CPU utilization", "It is designed to handle non-interactive tasks only"],
+    "answer": 0
+},
+{
+    "question": "What does 'context switching' refer to in an operating system?",
+    "options": ["The process of saving and loading the state of a process when switching between processes", "The method of allocating memory to processes", "The technique used to optimize file system access", "The process of handling interrupts from hardware devices"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a hybrid operating system?",
+    "options": ["Windows NT", "Unix", "DOS", "Linux"],
+    "answer": 0
+},
+{
+    "question": "What is 'multitasking' in an operating system?",
+    "options": ["The ability to run multiple tasks or processes at the same time", "The technique for managing system memory", "A method for scheduling tasks in priority order", "The process of managing user authentication"],
+    "answer": 0
+},
+{
+    "question": "What is the 'file allocation table' (FAT) in an operating system?",
+    "options": ["A table used by the file system to track the locations of file data on disk", "A method of organizing files for quicker access", "A technique for compressing files", "A system for managing network connections"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a characteristic of a 'monolithic kernel'?",
+    "options": ["It integrates all core system services into one large kernel", "It uses microkernels to separate components into smaller modules", "It provides a user-friendly interface for process management", "It only supports one user at a time"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of a 'page table' in virtual memory management?",
+    "options": ["To map virtual addresses to physical addresses in memory", "To track the status of all running processes", "To manage file permissions", "To allocate memory to different processes"],
+    "answer": 0
+},
+{
+    "question": "What is 'RAID' in the context of operating systems?",
+    "options": ["A technology that combines multiple physical disk drives into one or more logical units for data redundancy or performance", "A method of encrypting files for security", "A system for managing user permissions", "A technique for optimizing CPU usage"],
+    "answer": 0
+},
+{
+    "question": "What does 'permission management' in an operating system control?",
+    "options": ["Who can access files, execute programs, and perform system operations", "How processes are scheduled to run on the CPU", "How memory is allocated to different processes", "How devices are connected to the system"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is an example of a 'graphical user interface' (GUI) in an operating system?",
+    "options": ["Windows", "Command Line Interface (CLI)", "Terminal", "Bash"],
+    "answer": 0
+},
+{
+    "question": "What does 'virtual memory' refer to in an operating system?",
+    "options": ["The use of disk space to simulate additional RAM", "The ability to run multiple virtual machines on a single host", "A technique to optimize CPU usage", "The process of encrypting data for secure storage"],
+    "answer": 0
+},
+{
+    "question": "What is the primary purpose of the 'I/O manager' in an operating system?",
+    "options": ["To manage input and output devices, ensuring correct data transfer", "To allocate memory for processes", "To schedule tasks for execution", "To handle file permissions"],
+    "answer": 0
+},
+{
+    "question": "What is the 'stack' used for in a process's memory structure?",
+    "options": ["To store function call information and local variables", "To manage the process's allocated memory space", "To store file system metadata", "To handle interrupt requests"],
+    "answer": 0
+},
+{
+    "question": "What is the role of a 'shell' in an operating system?",
+    "options": ["It provides a user interface to interact with the operating system", "It schedules processes for execution", "It manages network connections", "It allocates memory to system processes"],
+    "answer": 0
+},
+{
+    "question": "What is the 'fork system call' used for in an operating system?",
+    "options": ["To create a new process by duplicating the calling process", "To allocate memory to a process", "To handle file system operations", "To manage I/O devices"],
+    "answer": 0
+},
+{
+    "question": "What is 'process synchronization' in an operating system?",
+    "options": ["Ensuring that processes do not interfere with each other when accessing shared resources", "Scheduling processes based on priority", "The process of allocating memory for processes", "Managing input/output devices"],
+    "answer": 0
+},
+{
+    "question": "What is 'bus contention' in an operating system?",
+    "options": ["A situation where multiple processes compete for access to the system bus", "A method of handling interrupts from hardware devices", "A technique for managing memory fragmentation", "A process for managing file access permissions"],
+    "answer": 0
+},
+{
+    "question": "What does 'process scheduling' involve in an operating system?",
+    "options": ["Deciding the order in which processes are given access to the CPU", "Allocating memory to processes", "Managing file systems", "Handling user authentication"],
+    "answer": 0
+},
+      {
+    "question": "What is 'multithreading' in an operating system?",
+    "options": ["The ability of a CPU to execute multiple threads concurrently", "The technique for managing virtual memory", "The method of handling I/O operations", "The process of allocating memory to different processes"],
+    "answer": 0
+},
+{
+    "question": "What does the term 'system call' refer to in an operating system?",
+    "options": ["A mechanism for a program to request a service from the kernel", "A method of scheduling processes", "A technique for managing user authentication", "A process for allocating memory to the system"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of the 'kernel' in an operating system?",
+    "options": ["It manages system resources and communication between hardware and software", "It provides a user-friendly interface for file management", "It allocates memory to individual processes", "It handles networking protocols"],
+    "answer": 0
+},
+{
+    "question": "What is 'paging' in virtual memory management?",
+    "options": ["Dividing the virtual memory into fixed-size pages and mapping them to physical memory", "A method of compressing files to save space", "A technique for managing file permissions", "A process of allocating resources to I/O devices"],
+    "answer": 0
+},
+{
+    "question": "Which operating system is an example of an open-source OS?",
+    "options": ["Linux", "Windows 10", "macOS", "DOS"],
+    "answer": 0
+},
+{
+    "question": "What does 'preemptive multitasking' mean in an operating system?",
+    "options": ["The ability of the OS to take control of the CPU from a running process in favor of a higher-priority process", "The process of allocating memory dynamically", "Scheduling processes to run one after the other", "The method of handling I/O operations"],
+    "answer": 0
+},
+{
+    "question": "What does 'cache memory' refer to in an operating system?",
+    "options": ["A small, fast memory used to store frequently accessed data", "A backup storage area for files", "A technique for storing virtual memory", "A method of compressing data for transmission"],
+    "answer": 0
+},
+{
+    "question": "What is the purpose of 'dynamic memory allocation' in an operating system?",
+    "options": ["It allows processes to request and release memory during runtime", "It enables memory protection mechanisms", "It stores data in the system cache", "It optimizes file access operations"],
+    "answer": 0
+},
+{
+    "question": "Which of the following is a key function of an operating system?",
+    "options": ["Managing hardware resources", "Designing applications", "Optimizing the performance of specific software", "Handling network traffic"],
+    "answer": 0
+},
+{
+    "question": "What is 'semaphore' used for in process synchronization?",
+    "options": ["It is a signaling mechanism used to control access to shared resources", "It is a system for scheduling processes", "It handles I/O operations", "It is used for memory allocation"],
+    "answer": 0
+},
+{
+    "question": "What does 'file system fragmentation' refer to?",
+    "options": ["The scattering of file data across the disk, reducing storage efficiency", "The process of organizing files for quicker access", "The method for encrypting files", "The system for handling network traffic"],
+    "answer": 0
+},
+{
+    "question": "What is a 'bootloader' in an operating system?",
+    "options": ["A program that loads the operating system into memory during startup", "A system that manages network configurations", "A tool for managing process scheduling", "A technique for handling memory fragmentation"],
+    "answer": 0
+},
+{
+    "question": "What does 'memory protection' do in an operating system?",
+    "options": ["It prevents processes from accessing each other's memory space", "It allocates additional memory for processes", "It manages virtual memory swapping", "It handles memory compression for storage efficiency"],
+    "answer": 0
+},
+{
+    "question": "What is 'time-sharing' in an operating system?",
+    "options": ["A method of allocating CPU time to multiple processes", "A technique for managing memory access", "The process of synchronizing system clocks", "A system for allocating disk space"],
+    "answer": 0
+},
+{
+    "question": "What is the 'Windows registry' used for?",
+    "options": ["A database that stores configuration settings and options for the OS and installed programs", "A file system for organizing user data", "A technique for managing file permissions", "A method for tracking network connections"],
+    "answer": 0
+},
+{
+    "question": "Which scheduling algorithm is used by most modern operating systems?",
+    "options": ["Multilevel queue scheduling", "First Come First Serve (FCFS)", "Round Robin scheduling", "Shortest Job Next (SJN)"],
+    "answer": 0
+},
+{
+    "question": "What is 'deadlock avoidance' in an operating system?",
+    "options": ["A strategy used to prevent deadlock situations by controlling resource allocation", "A method for managing memory fragmentation", "A technique for improving I/O performance", "A process for allocating CPU time to tasks"],
+    "answer": 0
+},
+{
+    "question": "What does 'swapping' mean in memory management?",
+    "options": ["Transferring data between physical memory and disk storage to free up space", "Allocating memory to running processes", "Managing system resources", "Optimizing file storage"],
+    "answer": 0
+},
+{
+    "question": "What is the function of the 'interrupt handler' in an operating system?",
+    "options": ["It manages interrupts by saving the state of the current process and processing the interrupt", "It schedules processes based on priority", "It manages memory allocation", "It handles file permissions"],
+    "answer": 0
+}
+  ]
         };
         
         // Initialize the quiz
